@@ -1,0 +1,9 @@
+.navbar {
+    background-color: rgb(67, 204, 181);
+}
+
+.logo {
+    width: 40px;
+    border: 2px dashed rgb(92, 92, 92);
+    margin-right: 0.5rem;
+}

@@ -1,0 +1,14 @@
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(224, 243, 241);
+}
+
+.contenedor > div {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.nav2 {
+    background-color: rgb(195, 235, 231);
+}

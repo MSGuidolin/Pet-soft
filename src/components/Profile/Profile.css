@@ -1,0 +1,12 @@
+.dog {
+}
+
+.card {
+    width: 15rem;
+    border: 2px solid black;
+    margin: 1rem;
+}
+
+.card > img {
+    height: 200px;
+}
