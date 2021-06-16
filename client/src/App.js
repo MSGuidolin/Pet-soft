@@ -7,6 +7,7 @@ import Map from './components/Map/Map';
 import Profile from './components/Profile/Profile';
 import Footer from './components/Footer/Footer';
 import SignIn from './components/SignIn/SignIn';
+import CreatePet from './components/CreatePet/CreatePet';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Route exact path='/home' component={Home}></Route>
       <Route exact path='/home/map' component={Map}></Route>
       <Route exact path='/home/profile' component={Profile}></Route>
+      <Route exact path='/home/profile/add' component={CreatePet}></Route>
       <Route path='/' component={Footer}></Route>
     </React.Fragment>
   )

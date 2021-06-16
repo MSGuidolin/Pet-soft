@@ -4,7 +4,8 @@ module.exports = (sequelize) => {
     sequelize.define('Pets',
         {
             id: {
-                type: DataTypes.id,
+                type: DataTypes.INTEGER,
+                autoIncrement: true,
                 primaryKey: true
             },
             name: {
@@ -15,6 +16,24 @@ module.exports = (sequelize) => {
                         msg: 'It requires a valid name'
                     }
                 }
+            },
+            specie: {
+                type: DataTypes.STRING,
+                allowNull: false,
+                validate: {
+                    notNull: {
+                        msg: 'It requires a valid specie'
+                    }
+                }
+            },
+            race: {
+                type: DataTypes.STRING
+            },
+            dateBirth: {
+                type: DataTypes.DATEONLY
+            },
+            weight: {
+                type: DataTypes.REAL
             }
         },
         { timestamps: false }

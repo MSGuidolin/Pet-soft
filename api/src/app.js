@@ -11,9 +11,6 @@ const server = express();
 
 server.name = 'API';
 
-Router.get
-Router.post()
-
 // HEADERS
 
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
