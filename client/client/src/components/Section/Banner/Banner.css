@@ -1,0 +1,33 @@
+.banner-container {
+  width: 100%;
+  padding: 50px 200px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.banner {
+  display: flex;
+  justify-content: center;
+}
+.titulo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.texto {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 200%;
+  margin-top: 5rem;
+}
+.banner-img {
+  height: 90%;
+  width: 152%;
+  border-radius: 30px;
+}
+.about {
+  justify-content: center;
+}

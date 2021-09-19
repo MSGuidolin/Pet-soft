@@ -1,0 +1,13 @@
+
+.card-provider {
+    box-shadow: 4px 4px 6px grey;
+    margin: 1rem;
+    filter: contrast(90%);
+    &:hover {
+      transform: scale(1.06, 1.06);
+      transition: transform 0.5s ease-in-out;
+      filter: saturate(140%);
+    }
+    width: 21rem;
+  }
+  

@@ -1,0 +1,70 @@
+.calendar-events{
+    width: 50%;
+    margin: 30px;
+}
+
+.calendar-container{
+    display: flex;
+    padding: 50px;
+}
+
+.calendar-division{
+    width: 50%;
+    margin: auto;
+}
+
+.event{
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.available {
+    background-color: rgb(206, 236, 255);
+}
+
+.not-available {
+    background-color: rgb(254, 255, 206);
+}
+
+.not-active {
+    background-color: rgb(255, 206, 206);
+}
+
+.fc-day:hover {
+    background-color: rgb(173, 204, 253);
+}
+
+.fc-day-past {
+    color: rgb(180, 1, 1);
+    background-color: rgb(194, 194, 194);
+}
+
+.fc-daygrid {
+    box-shadow: 0 0 5px black;
+}
+
+.cartItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+@media (max-width: 1200px) {
+    .calendar-container{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .calendar-division{
+        width: 100%;
+        margin: auto;
+    }
+    .calendar-events{
+        width: 100%;
+        margin: auto;
+    }
+}

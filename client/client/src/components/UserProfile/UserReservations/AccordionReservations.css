@@ -1,0 +1,82 @@
+.accordion-wrapper {
+  display: flex;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion {
+  width: 500px;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 3%), 0 6.7px 5.3px rgb(0 0 0 / 5%),
+    0 12.5px 10px rgb(0 0 0 / 6%);
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-description {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.75s cubic-bezier(0, 1, 0, 1);
+  position: relative;
+}
+
+.accordion-description-show {
+  max-height: 9999px;
+  overflow: hidden;
+  transition: all 0.75s cubic-bezier(0, 1, 0, 1);
+  position: relative;
+}
+
+.cancel-button{
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1em;
+  padding: 5px 10px 5px 10px;
+}
+
+.cancel-button:hover {
+  background-color: rgb(255, 147, 147);
+}
+
+.check-button{
+  height: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 1em;
+  padding: 5px 10px 5px 10px;
+}
+
+.check-button:hover {
+  background-color: rgb(147, 230, 255);
+}
+
+.center-target-button{
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.event-active{
+  background-color: rgba(184, 255, 221, 0.8);
+}
+.event-not-active{
+  background-color: rgba(253, 200, 200, 0.8);
+}
+
+.event-history{
+  background-color: rgba(210, 237, 255, 0.8);
+}

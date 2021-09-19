@@ -1,0 +1,43 @@
+.accordion-wrapper {
+  display: flex;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion {
+  width: 500px;
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-description {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.75s cubic-bezier(0, 1, 0, 1);
+  position: relative;
+}
+
+.accordion-description-show {
+  max-height: 9999px;
+  overflow: hidden;
+  transition: all 0.75s cubic-bezier(0, 1, 0, 1);
+  position: relative;
+}
+
+
+.trash-icon, .edit-icon{
+margin: 0 5px;
+}
+
+.trash-icon{
+    color: red;
+}
+
+.isMain {
+  background-color: rgb(170, 255, 215);
+}

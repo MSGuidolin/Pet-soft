@@ -1,0 +1,71 @@
+.banner {
+    display: flex;
+    justify-content: center;
+  }
+
+  .title-background {
+    background-image: url('https://www.dietox.es/blog/wp-content/uploads/2017/03/spa4.png');
+    background-size: cover;
+    padding: 25px;
+    box-shadow: 0 2px 4px black;
+    opacity: 0.8;
+    top: 100;
+    left: 150;
+    width: 40rem;
+    height: 20rem;
+    color: rgb(126, 13, 111);
+    margin-top: 25px;
+  }
+
+  .titulo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  .texto {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 200%;
+    margin-top: 5rem;
+  }
+
+  .about {
+    justify-content: center;
+  }
+
+    .info-provider {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-right: 2rem;
+      margin-left: 0px;
+      margin-top: 25px;
+      justify-self: left;
+      .container-hours-profile {
+        border-radius: 5px;
+        box-shadow: 4px 4px 5px grey;
+      }
+
+    .prov-detail {
+      align-self: flex-start;
+      padding: 1rem;
+    }
+
+    .render-clients {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 90rem;
+      padding: 25px;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+
+  .asdf{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }

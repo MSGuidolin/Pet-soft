@@ -1,1 +1,0 @@
-export const PET_URL = 'http://localhost:3001/pets';
