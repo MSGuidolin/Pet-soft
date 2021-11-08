@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@material-ui/core';
-import Image from '../../../img/banner.jpg';
+import Image from '../../../img/banner.png';
 
 function ProviderProfileBanner({ classes, provider }) {
     return (

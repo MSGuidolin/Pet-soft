@@ -293,7 +293,8 @@ export default function PrimarySearchAppBar() {
                 style={{
                   width: '4rem',
                   height: '4rem ',
-                  marginBottom: '-1rem',
+                  marginBottom: '-5px',
+                  marginTop: '2px'
                 }}
               />
             </Link>

@@ -4,12 +4,12 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import { makeStyles } from "@material-ui/core/styles";
-import Image from "../../img/banner.jpg";
+import Image from "../../img/banner.png";
 import { data } from '../../utils/aboutUsData';
 
 const useStyles = makeStyles(() => ({
   bannerImg: {
-    width: "100%",
+    width: '80%'
   },
   bannerContainer: {
     position: "relative",

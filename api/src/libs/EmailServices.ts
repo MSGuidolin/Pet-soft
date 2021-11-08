@@ -30,8 +30,8 @@ const sendCofirmationEmail = async (user:any) =>{
         from: 'Validation email  <no-replay@spatify.com>',
         to: `${user.email}`,
 
-        subject: 'Confima tu cuenta Spa-Tify ',
-        html: `<h1> Bienvenidos a  Spa-Tify</h1>
+        subject: 'Confima tu cuenta PET-SOFT ',
+        html: `<h1> Bienvenidos a  PET-SOFT</h1>
         <p> Hacé Click en el link para confirmar tu email
           <a href="${url}"> ${url} </a> </p>`
 

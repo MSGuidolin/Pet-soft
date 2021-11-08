@@ -13,7 +13,7 @@ import Slide from '@material-ui/core/Slide';
 import { makeStyles } from '@material-ui/core/styles';
 import { getProviderDetails } from '../../../Redux/actions/actions';
 import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '../../../Redux/actions/user.actions';
+import { LoginUser, logout } from '../../../Redux/actions/user.actions';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -47,10 +47,18 @@ export default function DialogFinalRegister({ nameBoton, providerID }) {
     (state) => state.providerDetails
   );
   const [open, setOpen] = React.useState(false);
+  const [EMAIL, setEMAIL] = React.useState('');
+  const loginData = useSelector((state) => state.loginData);
 
   useEffect(() => {
     dispatch(getProviderDetails(providerID));
   }, [dispatch]);
+
+  useEffect(() => {
+    if (loginData.providerFound) {
+      setEMAIL(loginData.providerFound.email);
+    }
+  }, [loginData]);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -59,12 +67,23 @@ export default function DialogFinalRegister({ nameBoton, providerID }) {
   const handleClose = async () => {
     // setOpen(false);
     dispatch(logout());
-    await window.localStorage.clear();
-    history.push('/login');
-    window.location.reload(true);
-    toast.success(`Proceso finalizado, ya puede acceder a su cuenta`, {
-      position: toast.POSITION.TOP_CENTER
-    })
+    window.localStorage.clear()
+    dispatch(LoginUser({ email: EMAIL, password: '12345678' })).then(
+      (user) => {
+        toast.success(
+          `👍 Bienvenido, Un gran día te espera!`,
+          {
+            position: toast.POSITION.TOP_CENTER,
+          }
+        );
+        history.push('/user/provider');
+        window.location.reload(true);
+      }
+    );
+    // history.push('/user/provider');
+    // toast.success(`Proceso finalizado, ya puede acceder a su cuenta`, {
+    //   position: toast.POSITION.TOP_CENTER
+    // })
   };
 
   return (

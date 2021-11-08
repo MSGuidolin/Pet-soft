@@ -17,6 +17,7 @@ import Box from "@material-ui/core/Box";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import FormControl from '@mui/material/FormControl';
 import Container from "@material-ui/core/Container";
 import { InputLabel } from "@material-ui/core";
 import { Link } from "react-router-dom";
@@ -91,7 +92,7 @@ export default function SignUp() {
             console.log(firstName.value);
             setValid(false);
             isValid = false;
-            setError({ ...error, firstNameError: "Por favor ingrese su nombre" });
+            setError({ ...error, firstNameError: "Por favor ingrese el tipo" });
         } else if (/\d/.test(firstName.value)) {
             setValid(false);
             isValid = false;
@@ -104,14 +105,7 @@ export default function SignUp() {
         if (!lastName.value) {
             setValid(false);
             isValid = false;
-            setError({ ...error, lastNameError: "Por favor ingrese su apellido" });
-        } else if (/\d/.test(lastName.value)) {
-            setValid(false);
-            isValid = false;
-            setError({
-                ...error,
-                lastNameError: "El apellido no puede contener números",
-            });
+            setError({ ...error, lastNameError: "Por favor ingrese un nombre" });
         }
         return isValid;
     };
@@ -297,7 +291,7 @@ export default function SignUp() {
                 >
                     <Grid container spacing={2}>
                         <Grid item xs={12} sm={6}>
-                            <TextField
+                            {/* <TextField
                                 autoComplete="fname"
                                 name="firstName"
                                 variant="outlined"
@@ -309,7 +303,24 @@ export default function SignUp() {
                                 error={!valid}
                                 helperText={!valid ? error.firstNameError : ""}
                                 {...firstName}
-                            />
+                            /> */}
+                            <FormControl fullWidth>
+                                <InputLabel id="demo-simple-select-label">Tipo de local</InputLabel>
+                                <Select
+                                    labelId="demo-simple-select-label"
+                                    name="firstName"
+                                    required
+                                    id="firstName"
+                                    label="Tipo de local"
+                                    error={!valid}
+                                    helperText={!valid ? error.firstNameError : ""}
+                                    {...firstName}
+                                // onChange={handleChange}
+                                >
+                                    <MenuItem value={'Veterinaria'}>Veterinaria</MenuItem>
+                                    <MenuItem value={'Pet Shop'}>Pet Shop</MenuItem>
+                                </Select>
+                            </FormControl>
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <TextField

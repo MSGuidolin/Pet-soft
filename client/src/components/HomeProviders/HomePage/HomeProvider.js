@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./HomeProviders.scss";
-import banner from "../../../img/banner.jpg";
+import banner from "../../../img/banner.png";
 import VerticalLinearStepper from "../Stepper/SelectService";
 import RecipeReviewCard from "../PendingServices/PendingServices";
 import { useDispatch, useSelector } from "react-redux";

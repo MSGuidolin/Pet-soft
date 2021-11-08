@@ -2,16 +2,16 @@ import React from 'react';
 import { Grid, Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
-import Image from '../../img/banner.jpg';
+import Image from '../../img/banner.png';
 
 const useStyles = makeStyles(() => ({
     bannerImg: {
-        width: '100%'
+        width: '80%'
     },
     bannerContainer:{
         position: 'relative',
         textAlign: 'center',
-        width: '100%'
+        width: '100%',
     },
     bannerText: {
         position: 'absolute',
