@@ -1,0 +1,62 @@
+import Role from '../models/Roles';
+import Services from '../models/Services';
+
+export const createRoles = async () => {
+  try {
+    const count = await Role.estimatedDocumentCount();
+    if (count > 0) return;
+
+    const values = await Promise.all([
+      new Role({ name: 'user' }).save(),
+      new Role({ name: 'provider' }).save(),
+      new Role({ name: 'admin' }).save(),
+    ]);
+    console.log(values);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const createService = async () => {
+  try {
+    const count = await Services.estimatedDocumentCount();
+    if (count > 0) return;
+
+    const values = await Promise.all([
+      new Services({
+        image:
+          'https://www.veterinariaguadarrama.com/wp-content/uploads/2017/06/71986_head-1024x560.png',
+        name: 'Corte y baño',
+        price: 700,
+        description: `Corte de cabello con cuidados y precauciones adecuadas a
+         las características de tu mascota, con ducha incluida`,
+      }).save(),
+      new Services({
+        image:
+          'https://www.consumer.es/wp-content/uploads/2019/07/img_heridas-perros-patas-2.jpg',
+        name: 'Revisión',
+        price: 500,
+        description: `Turno para revisión médica de rutina o buscando el origen a un problema particular`,
+      }).save(),
+      new Services({
+        image:
+          'https://imagenes.lainformacion.com/files/image_656_370/uploads/imagenes/2018/05/25/5b07d92e563ba.jpeg',
+        name: 'Esterilización',
+        price: 5000,
+        description: `La operación de esterilización no solo previene la
+         reproducción, sino que, ayuda a disminuir la posibilidad de cancer y
+          otras enfermedades`,
+      }).save(),
+      new Services({
+        image:
+          'https://t2.ea.ltmcdn.com/es/images/3/6/3/las_vacunas_de_los_cachorros_23363_2_600.jpg',
+        name: 'Operación mayor',
+        price: 10000,
+        description: `Cirugías de cabeza, tórax y zonas de mayor riesgo`,
+      }).save(),
+    ]);
+    console.log(values);
+  } catch (error) {
+    console.log(error);
+  }
+};
