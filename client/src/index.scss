@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+:root {
+  --primary-color: #58abf6;
+  --border: #007aff;
+  --error: #e94040;
+  --success: #00c469;
+  --background_color: #ffffff;
+}
+
+.container-main {
+  background-image: url("https://c.wallhere.com/photos/55/fa/2560x1488_px_animal_images_baby_animals_cool_pictures_cute_animals_cuties_hd_images_pet_photos-803155.jpg!d");
+  background-repeat: no-repeat;
+  display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  background-position: center center;
+  background-size: cover;
+}
+
+.container {
+  display: table;
+  min-width: 90vw;
+  min-height: 93vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(245, 253, 251);
+  opacity: 90%;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
