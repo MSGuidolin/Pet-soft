@@ -1,0 +1,12 @@
+.test{
+    .mercadopago-button{
+        display: flex;
+        width: -webkit-fill-available;
+        justify-content: center;
+        text-transform: uppercase;
+        font-family: "Mulish", sans-serif;
+    }
+    .mercadopago-button:hover {
+        background-color: rgb(12, 136, 185);
+    }
+}
