@@ -6,7 +6,7 @@ export const RESERVATIONS = "/reservations";
 export const EVENTS = "/events"
 export const USER = "/user"
 /* 
-export const ID =  JSON.parse(localStorage.getItem('loggedSpatifyApp')).userFound._id; */
+export const ID =  JSON.parse(localStorage.getItem('loggedPetSoftApp')).userFound._id; */
 /* export const ID = 2 */
 
 

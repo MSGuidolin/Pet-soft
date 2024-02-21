@@ -27,11 +27,11 @@ const sendCofirmationEmail = async (user:any) =>{
    console.log(url)
 
     const msg = {
-        from: 'Validation email  <no-replay@spatify.com>',
+        from: 'Validation email  <no-replay@petsoft.com>',
         to: `${user.email}`,
 
-        subject: 'Confima tu cuenta PET-SOFT ',
-        html: `<h1> Bienvenidos a  PET-SOFT</h1>
+        subject: 'Confima tu cuenta PetSoft ',
+        html: `<h1> Bienvenidos a  PetSoft</h1>
         <p> Hacé Click en el link para confirmar tu email
           <a href="${url}"> ${url} </a> </p>`
 

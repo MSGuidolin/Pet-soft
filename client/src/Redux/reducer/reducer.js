@@ -73,7 +73,7 @@ const appReducer = (state = initialState, action) => {
     //USERS LOGIN
     case actionsTypes.LOGIN_SUCCESSFUL:
       window.localStorage.setItem(
-        "loggedSpatifyApp",
+        "loggedPetSoftApp",
         JSON.stringify(action.payload)
       );
       return {
@@ -86,7 +86,7 @@ const appReducer = (state = initialState, action) => {
 
     //LOGOUT USERS
     case actionsTypes.LOGOUT:
-      window.localStorage.setItem("loggedSpatifyApp", "");
+      window.localStorage.setItem("loggedPetSoftApp", "");
       // window.localStorage.setItem('token', action.payload.token);
       return {
         ...state,
@@ -103,7 +103,7 @@ const appReducer = (state = initialState, action) => {
     //UPDATE USERS AFTER LOGIN GOOGLE
     // case actionsTypes.UPDATE_USERS_AFTER_GOOGLE:
     //   window.localStorage.setItem(
-    //     'loggedSpatifyApp',
+    //     'loggedPetSoftApp',
     //     JSON.stringify(action.payload)
     //   );
     //   return {

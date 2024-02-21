@@ -66,8 +66,8 @@ export default function Reservation({ handleActive, date, hour, provider, servic
     };
 
     useEffect(() => {
-        if (localStorage.getItem('loggedSpatifyApp')) {
-            const storageData = JSON.parse(localStorage.getItem('loggedSpatifyApp'))
+        if (localStorage.getItem('loggedPetSoftApp')) {
+            const storageData = JSON.parse(localStorage.getItem('loggedPetSoftApp'))
             if (storageData.userFound.roles[0]?.name === "user") {
                 setData({
                     ...data,

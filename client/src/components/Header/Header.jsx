@@ -104,8 +104,8 @@ export default function PrimarySearchAppBar() {
   const { user } = useContext(UserContext);
 
   useEffect(() => {
-    if (localStorage.getItem('loggedSpatifyApp')) {
-      const storageData = JSON.parse(localStorage.getItem('loggedSpatifyApp'));
+    if (localStorage.getItem('loggedPettifyApp')) {
+      const storageData = JSON.parse(localStorage.getItem('loggedPetSoftApp'));
       console.log(storageData)
       if (storageData.userFound) {
         if (storageData.userFound.roles[0]?.name == 'user') {
@@ -123,7 +123,7 @@ export default function PrimarySearchAppBar() {
   const open = Boolean(anchorEl);
 
   useEffect(() => {
-    const loggedUserJSON = window.localStorage.getItem('loggedSpatifyApp');
+    const loggedUserJSON = window.localStorage.getItem('loggedPetSoftApp');
     if (loggedUserJSON) {
       const user = JSON.parse(loggedUserJSON);
       user.userFound
@@ -312,7 +312,7 @@ export default function PrimarySearchAppBar() {
           </Link>
 
           <Link
-            to={'/about-Spa-tify'}
+            to={'/about-PetSoft'}
             style={{
               textDecoration: 'none',
               fontWeight: 'bold',
@@ -333,7 +333,7 @@ export default function PrimarySearchAppBar() {
             <div style={{ marginLeft: '4rem' }}>Sobre nosotros</div>
           </Link>
 
-          <Link
+          {/* <Link
             to={'/covid'}
             style={{
               textDecoration: 'none',
@@ -342,7 +342,7 @@ export default function PrimarySearchAppBar() {
             }}
           >
             <div style={{ marginLeft: '4rem' }}>Protocolo COVID-19</div>
-          </Link>
+          </Link> */}
 
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}></div>

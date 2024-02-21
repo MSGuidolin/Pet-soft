@@ -17,9 +17,9 @@ import ProviderDetails from "../components/ProviderDetails/ProviderDetails";
 import HomeProvider from "../components/HomeProviders/HomePage/HomeProvider";
 import Providers from "../components/SearchProvider/Providers";
 import ProviderRating from "../components/Section/ProviderRating/ProviderRating";
-import CovidProtocol from "../components/CovidProtocol/CovidProtocol";
+// import CovidProtocol from "../components/CovidProtocol/CovidProtocol";
 import Footer from "../components/Footer/Footer";
-import AboutSpaTify from "../components/About/AboutSpaTify";
+import AboutPetSoft from "../components/About/AboutPetSoft.js";
 import AboutUs from "../components/About/AboutUs";
 import CompletePerfil from '../components/CompletePerfil/CompletePerfil';
 
@@ -59,7 +59,7 @@ const App = () => {
       <Route exact path="/providers/:id" component={ProviderDetails} />
       <Route exact path="/profile/:id" component={UserProfile} />
       <Route exact path="/search" component={Providers} />
-      <Route exact path="/covid" component={CovidProtocol} />
+      {/* <Route exact path="/covid" component={CovidProtocol} /> */}
       <Route exact path="/perfil/historial" component={EventsHistory} />
       <Route exact path="/perfil/Mascotas" component={Pets} />
       <Route exact path="/confirmation/user/:id" component={ConfirmationMail} />
@@ -68,7 +68,7 @@ const App = () => {
         path="/confirmation/provider/:id"
         component={ConfirmationMailProvider}
       />
-      <Route exact path="/about-Spa-tify" component={AboutSpaTify} />
+      <Route exact path="/about-PetSoft" component={AboutPetSoft} />
       <Route exact path="/about-Us" component={AboutUs} />
       <Route path="/" component={Footer} />
     </React.Fragment>

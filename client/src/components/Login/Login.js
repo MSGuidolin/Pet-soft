@@ -170,7 +170,7 @@ export default function SignIn() {
             }
           );
           toast.warning(
-            `Asegurate de haber confirmado tu cuenta, chequea tu casilla de email`,
+            `Asegurate de haber confirmado tu cuenta, revisa tu casilla de e-mail`,
             {
               position: toast.POSITION.TOP_CENTER,
             }
@@ -235,12 +235,12 @@ export default function SignIn() {
             className={classes.submit}
             style={{ backgroundColor: "#006064" }}
           >
-            Entrar
+            INGRESAR
           </Button>
           <Grid container>
             <Grid item>
               <Link to={"/userRegister"} variant="body2">
-                {"No tienes cuenta? Registrate"}
+                {"¿No tienes cuenta? ¡Registrate aquí!"}
               </Link>
             </Grid>
           </Grid>

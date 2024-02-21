@@ -9,8 +9,8 @@ function Section() {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.userReservations.data);
   useEffect(() => {
-    if (localStorage.getItem("loggedSpatifyApp")) {
-      const storageData = JSON.parse(localStorage.getItem("loggedSpatifyApp"));
+    if (localStorage.getItem("loggedPetSoftApp")) {
+      const storageData = JSON.parse(localStorage.getItem("loggedPetSoftApp"));
       if (storageData.userFound.roles[0].name === "user") {
         setID(storageData.userFound._id);
       }

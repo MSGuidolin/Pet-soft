@@ -83,7 +83,7 @@ function Footer() {
               className={classes.footerLinksDivider}
             />
             <Grid item>
-              <Link to="/about-Spa-tify">
+              <Link to="/about-PetSoft">
                 <p>Sobre Pet-soft</p>
               </Link>
             </Grid>
@@ -96,7 +96,7 @@ function Footer() {
                 <p>Sobre nosotros</p>
               </Link>
             </Grid>
-            <Divider
+            {/* <Divider
               component="p"
               className={classes.footerLinksDivider}
             />
@@ -104,7 +104,7 @@ function Footer() {
               <Link to="/covid">
                 <p>Protocolo COVID-19</p>
               </Link>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Grid>
 

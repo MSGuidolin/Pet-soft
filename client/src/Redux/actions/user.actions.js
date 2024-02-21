@@ -39,8 +39,8 @@ export const logout = () => {
 };
 
 export const userActiveSession = () => {
-  window.localStorage.getItem('loggedSpatifyApp');
-  const user = JSON.parse(window.localStorage.getItem('loggedSpatifyApp'));
+  window.localStorage.getItem('loggedPetSoftApp');
+  const user = JSON.parse(window.localStorage.getItem('loggedPetSoftApp'));
   return (dispatch) => {
     dispatch({
       type: actionsTypes.LOGGIN_IN_SESSION,

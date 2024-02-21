@@ -10,8 +10,8 @@ import {
 import { validate } from "../../../utils/validate-user-profile";
 import "./FormReview.css";
 
-const ID = window.localStorage.getItem("loggedSpatifyApp")
-  ? JSON.parse(window.localStorage.getItem("loggedSpatifyApp"))
+const ID = window.localStorage.getItem("loggedPetSoftApp")
+  ? JSON.parse(window.localStorage.getItem("loggedPetSoftApp"))
   : null;
 
 function FormReview({ showModal, setShowModal, eventId, setChange, ind }) {

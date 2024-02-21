@@ -151,7 +151,7 @@ const HomeProvider = () => {
   const addresses = useSelector((state) => state.providersAddresses);
 
   const provider = JSON.parse(
-    window.localStorage.getItem("loggedSpatifyApp")
+    window.localStorage.getItem("loggedPetSoftApp")
   ).providerFound;
 
   const [users, setUsers] = useState({
@@ -160,7 +160,7 @@ const HomeProvider = () => {
   });
 
   useEffect(() => {
-    const user = JSON.parse(window.localStorage.getItem("loggedSpatifyApp"));
+    const user = JSON.parse(window.localStorage.getItem("loggedPetSoftApp"));
     if (user) {
       user.userFound
         ? setUsers({

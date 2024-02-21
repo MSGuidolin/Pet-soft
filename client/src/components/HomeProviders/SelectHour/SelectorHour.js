@@ -42,7 +42,7 @@ export default function MaterialUIPickers({ type }) {
   const initialState = new Date();
   const [selectedDate, setSelectedDate] = useState(initialState.getHours());
 
-  const provider = JSON.parse(window.localStorage.getItem('loggedSpatifyApp'));
+  const provider = JSON.parse(window.localStorage.getItem('loggedPetSoftApp'));
   const [addHours, setAddHours] = useState({
     eventsHours: [],
     provider: provider.providerFound?._id,

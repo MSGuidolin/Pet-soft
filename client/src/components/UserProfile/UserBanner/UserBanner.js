@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUserProfile } from "../../../Redux/actions/user.actions";
 import "./UserBanner.scss";
 
-const ID = window.localStorage.getItem("loggedSpatifyApp")
-  ? JSON.parse(window.localStorage.getItem("loggedSpatifyApp"))
+const ID = window.localStorage.getItem("loggedPetSoftApp")
+  ? JSON.parse(window.localStorage.getItem("loggedPetSoftApp"))
   : null;
 
 
@@ -101,9 +101,9 @@ function UserBanner() {
   const userData = useSelector((state) => state.userData.data);
 
   useEffect(() => {
-    if (window.localStorage.getItem("loggedSpatifyApp")) {
+    if (window.localStorage.getItem("loggedPetSoftApp")) {
       const userData = JSON.parse(
-        window.localStorage.getItem("loggedSpatifyApp")
+        window.localStorage.getItem("loggedPetSoftApp")
       );
       if (userData.userFound.roles[0].name === "user") {
         setUserID(userData.userFound._id);

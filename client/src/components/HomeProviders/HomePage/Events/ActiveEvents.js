@@ -15,8 +15,8 @@ function ActiveEvents() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        if (localStorage.getItem("loggedSpatifyApp")) {
-            const storageData = JSON.parse(localStorage.getItem("loggedSpatifyApp"));
+        if (localStorage.getItem("loggedPetSoftApp")) {
+            const storageData = JSON.parse(localStorage.getItem("loggedPetSoftApp"));
             if (storageData.providerFound?.roles[0]?.name === "provider") {
                 setID(storageData.providerFound._id);
             }

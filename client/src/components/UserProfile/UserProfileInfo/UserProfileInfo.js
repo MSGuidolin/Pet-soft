@@ -25,9 +25,9 @@ function UserProfileInfo() {
   const userAddresses = useSelector((state) => state.userAddresses.data);
 
   useEffect(() => {
-    if (window.localStorage.getItem("loggedSpatifyApp")) {
+    if (window.localStorage.getItem("loggedPetSoftApp")) {
       const userData = JSON.parse(
-        window.localStorage.getItem("loggedSpatifyApp")
+        window.localStorage.getItem("loggedPetSoftApp")
       );
       if (userData.userFound.roles[0].name === "user") {
         setUserID(userData.userFound._id);

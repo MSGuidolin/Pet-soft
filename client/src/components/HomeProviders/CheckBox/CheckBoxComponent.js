@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 const CheckBoxComponent = ({ data }) => {
   const classes = useStyles();
 
-  const provider = JSON.parse(window.localStorage.getItem('loggedSpatifyApp'));
+  const provider = JSON.parse(window.localStorage.getItem('loggedPetSoftApp'));
   const dispatch = useDispatch();
 
   const [serviceAdd, setServiceAdd] = React.useState({

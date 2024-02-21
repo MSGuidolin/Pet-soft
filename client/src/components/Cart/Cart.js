@@ -37,8 +37,8 @@ function Cart(props) {
     const [page, setPage] = useState(0);
 
     useEffect(() => {
-        if (localStorage.getItem('loggedSpatifyApp')) {
-            const storageData = JSON.parse(localStorage.getItem('loggedSpatifyApp'))
+        if (localStorage.getItem('loggedPetSoftApp')) {
+            const storageData = JSON.parse(localStorage.getItem('loggedPetSoftApp'))
             if (storageData.userFound.roles[0].name === "user") {
                 axios.get(`${HOST}/reservations/${storageData.userFound._id}`)
                     .then(reservations => {

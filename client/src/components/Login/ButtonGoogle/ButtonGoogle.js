@@ -7,12 +7,12 @@ const ButtonGoogle = ({ handleClick }) => {
       <div className='google-icon-wrapper'>
         <img
           className='google-icon'
-          src='https://upload.wikimedia.org/wikipedia/commons/archive/5/53/20190925201609%21Google_%22G%22_Logo.svg'
+          src='https://imagepng.org/wp-content/uploads/2019/08/google-icon-1.png'
           alt='img-google'
         />
       </div>
       <p className='btn-text'>
-        <b>Login con Google</b>
+        <b>Ingresa con Google</b>
       </p>
     </div>
   );

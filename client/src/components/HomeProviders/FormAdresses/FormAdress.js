@@ -52,7 +52,7 @@ export default function FormAdresses({ type, alldata, data }) {
     (state) => state.providerDetails
   );
 
-  const provider = JSON.parse(window.localStorage.getItem("loggedSpatifyApp"));
+  const provider = JSON.parse(window.localStorage.getItem("loggedPetSoftApp"));
 
   const initialStateProfile = {
     provider: provider.providerFound?._id,
@@ -112,7 +112,7 @@ export default function FormAdresses({ type, alldata, data }) {
         }
       );
       window.localStorage.setItem(
-        "loggedSpatifyApp",
+        "loggedPetSoftApp",
         JSON.stringify({ providerFound: actualProvider })
       );
     } else {
@@ -120,7 +120,7 @@ export default function FormAdresses({ type, alldata, data }) {
       setDataAdress({});
       setOpen(false);
       window.localStorage.setItem(
-        "loggedSpatifyApp",
+        "loggedPetSoftApp",
         JSON.stringify({ providerFound: actualProvider })
       );
     }

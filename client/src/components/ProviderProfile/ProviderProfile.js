@@ -94,7 +94,7 @@ function ProviderProfile() {
   const classes = useStyles();
   const { id } = useParams();
   const provider = JSON.parse(
-    window.localStorage.getItem('loggedSpatifyApp')
+    window.localStorage.getItem('loggedPetSoftApp')
   ).providerFound;
 
   useEffect(() => {

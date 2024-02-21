@@ -12,9 +12,9 @@ function Form({ showModal, setShowModal, change }) {
   });
 
   useEffect(() => {
-    if (window.localStorage.getItem("loggedSpatifyApp")) {
+    if (window.localStorage.getItem("loggedPetSoftApp")) {
       const userData = JSON.parse(
-        window.localStorage.getItem("loggedSpatifyApp")
+        window.localStorage.getItem("loggedPetSoftApp")
       );
       if (userData.userFound.roles[0].name === "user") {
         setUserId(userData.userFound._id);
