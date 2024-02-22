@@ -42,8 +42,8 @@ const UserSchema = new Schema<IUser>(
     gender: {
       type: String,
 
-      enum: ['Male', 'Female', 'Non-binary'],
-      default: 'Non-binary',
+      enum: ['Male', 'Female', 'Unkwown'],
+      default: 'Unkwown',
 
     },
     email: {

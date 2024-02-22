@@ -319,7 +319,7 @@ export default function PrimarySearchAppBar() {
               color: '#00695c',
             }}
           >
-            <div style={{ marginLeft: '4rem' }}>Sobre Pet-Soft</div>
+            <div style={{ marginLeft: '4rem' }}>Sobre PetSoft</div>
           </Link>
 
           <Link

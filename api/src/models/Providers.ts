@@ -39,7 +39,7 @@ const ProvidersSchema = new Schema<IProvider>(
     },
     gender: {
       type: String,
-      enum: ["Male", "Female", "Non-binary"],
+      enum: ["Male", "Female", "Unkwown"],
     },
     email: {
       type: String,

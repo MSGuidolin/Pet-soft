@@ -98,8 +98,8 @@ function AboutUs() {
                   Sobre nosotros
                 </Typography>
                 <Typography className={classes.bannerSubtitle}>
-                  <b>Pet-Soft</b> Es el resultado del esfuerzo de 5 estudiantes del instituto de educación superior CESIT y
-                  fué realizado como proyecto de último año y con el objetivo de la graduación del mismo.
+                  <b>PetSoft</b> Es el resultado del esfuerzo de 5 estudiantes del instituto de educación superior CESIT y
+                  fue realizado como proyecto de último año y con el objetivo de la graduación del mismo.
                   <br />
                 </Typography>
               </div>

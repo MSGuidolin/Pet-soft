@@ -29,7 +29,7 @@ function Copyright() {
     <Typography variant='body2' color='textSecondary' align='center'>
       {'Copyright © '}
       <Link color='inherit' href='/'>
-        Pet-soft{' '}
+        PetSoft{' '}
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -244,14 +244,14 @@ const FormCompleteRegister = ({ id, userGoogle }) => {
                 <Select
                   labelId='demo-simple-select-label'
                   id='demo-simple-select'
-                  defaultValue={'Non-binary'}
+                  defaultValue={'Unkwown'}
                   error={!valid}
                   helperText={!valid ? error.genderError : ''}
                   {...gender}
                 >
                   <MenuItem value={'Male'}>Hombre</MenuItem>
                   <MenuItem value={'Female'}>Mujer </MenuItem>
-                  <MenuItem value={'Non-binary'}>No Binario</MenuItem>
+                  <MenuItem value={'Unkwown'}>Prefiero no decirlo</MenuItem>
                 </Select>
               </Grid>
 

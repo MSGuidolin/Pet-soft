@@ -224,7 +224,7 @@ const HomeProvider = () => {
             </div>
 
             <div className="title-background">
-              <h1>Pet-soft</h1>
+              <h1>PetSoft</h1>
               <h2>¡Bienvenido a tu {users.firstName} online!</h2>
             </div>
 

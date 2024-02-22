@@ -15,8 +15,6 @@ import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
@@ -25,7 +23,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import ButtonGoogle from "./ButtonGoogle/ButtonGoogle";
+// import ButtonGoogle from "./ButtonGoogle/ButtonGoogle";
 
 //google login
 
@@ -34,7 +32,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
       <Link color="inherit" href="/">
-        Pet-soft
+        PetSoft
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -180,9 +178,9 @@ export default function SignIn() {
     }
   };
 
-  const handleClick = () => {
-    window.open("http://localhost:3002/auth/google");
-  };
+  // const handleClick = () => {
+  //   window.open("http://localhost:3002/auth/google");
+  // };
 
   return (
     <Container component="main" maxWidth="xs">
@@ -195,8 +193,8 @@ export default function SignIn() {
           <LockOutlinedIcon />
         </Avatar>
         <br />
-        <br />
-        <ButtonGoogle handleClick={handleClick} />
+        {/* <br />
+        <ButtonGoogle handleClick={handleClick} /> */}
         <form className={classes.form} noValidate onSubmit={handleSubmit}>
           <TextField
             variant="outlined"

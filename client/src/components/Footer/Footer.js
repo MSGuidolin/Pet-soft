@@ -84,7 +84,7 @@ function Footer() {
             />
             <Grid item>
               <Link to="/about-PetSoft">
-                <p>Sobre Pet-soft</p>
+                <p>Sobre PetSoft</p>
               </Link>
             </Grid>
             <Divider

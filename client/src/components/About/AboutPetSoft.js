@@ -82,10 +82,10 @@ function AboutPetSoft() {
                         <Grid item container direction='row'>
                             <div className={classes.bannerContainer}>
                                 <img className={classes.bannerImg} src={Image}/>
-                                <Typography className={classes.bannerText} variant='h3'>Sobre Pet-Soft</Typography>
+                                <Typography className={classes.bannerText} variant='h3'>Sobre PetSoft</Typography>
                                 <Typography className={classes.bannerSubtitle}>
-                                <strong>Pet-soft</strong> es un sitio online que te permite reservar citas con los mejores locales de mascotas de tu zona.<br/>
-                                <strong>Pet-soft</strong> conecta profesionales con clientes, simplificando el proceso de reserva de turnos.
+                                <strong>PetSoft</strong> es un sitio online que te permite reservar citas con los mejores locales de mascotas de tu zona.<br/>
+                                <strong>PetSoft</strong> conecta profesionales con clientes, simplificando el proceso de reserva de turnos.
                                 </Typography>
                             </div>
                         </Grid>
@@ -94,7 +94,7 @@ function AboutPetSoft() {
                     <Grid item container direction='column' alignItems='center' className={classes.containerText}>
                         <Grid item className={classes.containerTextItem}>
                             <Typography variant='h5'>
-                                ¿Por qué Pet-Soft?
+                                ¿Por qué PetSoft?
                             </Typography>
                             <Typography className={classes.subtitle}>
                                 Queremos ofrecer la mejor aplicación de búsqueda y reserva de turnos con profesionales en el

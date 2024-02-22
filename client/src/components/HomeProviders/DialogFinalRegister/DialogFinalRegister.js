@@ -110,7 +110,7 @@ export default function DialogFinalRegister({ nameBoton, providerID }) {
         </DialogTitle>
         <DialogContent>
           <DialogContentText id='alert-dialog-slide-description'>
-            Desde ahora tu local es parte del gremio de Pet-soft. En tu correo recibiras las notificaciones de los servicios
+            Desde ahora tu local es parte del gremio de PetSoft. En tu correo recibiras las notificaciones de los servicios
             que adquieran contigo, además de encontrar todos los detalles es
             esta plataforma😎
           </DialogContentText>

@@ -18,7 +18,7 @@ export default function Banner() {
           color: "#00695c",
         }}
       >
-        <h1>Pet-soft</h1>
+        <h1>PetSoft</h1>
         <p>
           Hacemos todo por tu mascota!.
         </p>

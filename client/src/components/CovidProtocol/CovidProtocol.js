@@ -69,7 +69,7 @@ function CovidProtocol() {
                         <Grid item container direction='row'>
                             <div className={classes.bannerContainer}>
                                 <img className={classes.bannerImg} src={Image} />
-                                <Typography className={classes.bannerText} variant='h3'>En Pet-soft nos cuidamos entre todos</Typography>
+                                <Typography className={classes.bannerText} variant='h3'>En PetSoft nos cuidamos entre todos</Typography>
                                 <Typography className={classes.bannerSubtitle} variant='h5'>
                                     A continuación te detallamos los protocolos y medidas de seguridad que debemos
                                     tomar todos para poder brindar un servicio seguro y sin riesgos ante la pandemia
