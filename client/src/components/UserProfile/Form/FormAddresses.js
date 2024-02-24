@@ -116,7 +116,7 @@ function FormAddresses({ showModal, setShowModal, setChange }) {
               />
             </div>
             <div>
-              <label>Pais: </label>
+              <label>País: </label>
               <input
                 className={errors.country && "danger"}
                 name="country"

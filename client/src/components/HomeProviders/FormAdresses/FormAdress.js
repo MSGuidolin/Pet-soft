@@ -240,7 +240,7 @@ export default function FormAdresses({ type, alldata, data }) {
               <TextField
                 autoFocus
                 margin="dense"
-                label={type === "profile" ? "Nombre" : "Pais"}
+                label={type === "profile" ? "Nombre" : "País"}
                 type="text"
                 fullWidth
                 name={type === "profile" ? "firstName" : "country"}
@@ -256,7 +256,7 @@ export default function FormAdresses({ type, alldata, data }) {
               <TextField
                 autoFocus
                 margin="dense"
-                label={type === "profile" ? "Apellido" : "Estado"}
+                label={type === "profile" ? "Apellido" : "Provincia"}
                 type="text"
                 fullWidth
                 name={type === "profile" ? "lastName" : "state"}

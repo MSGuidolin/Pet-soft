@@ -82,7 +82,7 @@ function AccordionPrueba({ change, setChange }) {
             >
               {a && (
                 <div>
-                  <p className="p">Pais: {a.country}</p>
+                  <p className="p">País: {a.country}</p>
                   <p className="p">Provincia: {a.state}</p>
                   <p className="p">Ciudad: {a.c}</p>
                   <p className="p">Direccion: {a.address_1}</p>

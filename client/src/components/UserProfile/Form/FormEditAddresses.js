@@ -103,7 +103,7 @@ function FormEditAddresses({ editAddressModal, setEditAddressModal, addressId, d
               {errors.name && <p className="danger">{errors.name}</p>}
             </div>
             <div>
-              <label>*Pais: </label>
+              <label>*País: </label>
               <input
                 className={errors.country && "danger"}
                 name="country"
