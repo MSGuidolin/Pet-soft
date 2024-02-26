@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
   containerFooter: {
-    position: "relative",
+    position: "absolute",
     backgroundColor: "#00695c",
     width: "100%",
     height: 100,
@@ -96,15 +96,6 @@ function Footer() {
                 <p>Sobre nosotros</p>
               </Link>
             </Grid>
-            {/* <Divider
-              component="p"
-              className={classes.footerLinksDivider}
-            />
-            <Grid item>
-              <Link to="/covid">
-                <p>Protocolo COVID-19</p>
-              </Link>
-            </Grid> */}
           </Grid>
         </Grid>
 

@@ -3,7 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProviderDetails } from "../../Redux/actions/actions";
 import "./ProviderDetails.scss";
 import { useParams } from "react-router-dom";
-import def_est_img from "../../img/default_estilista.jpg";
+import veterinaria_default from "../../img/veterinaria-default.jpg";
+import petshop_default from "../../img/petshop-default.jpeg";
 import ProviderServices from "../ProviderServices/ProviderServices";
 
 const ProviderDetails = () => {
@@ -16,11 +17,12 @@ const ProviderDetails = () => {
   }, [dispatch]);
   console.log("DETALLES: ", providerDetails);
   return (
+
     <div className="container-main">
       <div className="container">
         <h1 className="title">
           {providerDetails.data &&
-            `Bienvenido al espacio de ${providerDetails.data.firstName}`}
+            `Bienvenido a ${providerDetails.data.lastName}`}
         </h1>
         <div>
           {providerDetails.data?.image !== undefined ? (
@@ -32,18 +34,18 @@ const ProviderDetails = () => {
           ) : (
             <img
               className="card-img"
-              src={def_est_img}
+              src={veterinaria_default}
               alt="Default Image"
             ></img>
           )}
           <div>
-            <h2 className="details-h2">Mi bio</h2>
+            <h2 className="details-h2">Mi información</h2>
             <div className="container-about">
               {providerDetails.data?.bio ? (
                 <p>{providerDetails.data.bio}</p>
               ) : (
                 <p>
-                  Hola! Mi nombre es{" "}
+                  ¡Hola! Somos{" "}
                   <b>
                     {`${providerDetails.data?.firstName} ${providerDetails.data?.lastName}`}
                     .

@@ -10,9 +10,14 @@ import axios from 'axios';
 
 function PetCard({ image, name, age, race, animal, userID }) {
 
-    const handleClick = () => {
+    const deletePet = () => {
         axios.delete(`http://localhost:3002/pets/${userID}/${name}`);
-
+    }
+    const editPet = () => {
+        axios.delete(`http://localhost:3002/pets/${userID}/${name}`);
+    }
+    const seePet = () => {
+        axios.delete(`http://localhost:3002/pets/${userID}/${name}`);
     }
 
     return (
@@ -39,7 +44,9 @@ function PetCard({ image, name, age, race, animal, userID }) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button onClick={handleClick} size="small">Eliminar</Button>
+                    <Button onClick={deletePet} size="small">Eliminar</Button>
+                    {/* <Button onClick={editPet} size="small">Editar</Button> */}
+                    {/* <Button onClick={seePet} size="small">Ver</Button> */}
                 </CardActions>
             </Card>
         </div>

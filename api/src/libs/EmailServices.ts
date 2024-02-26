@@ -31,7 +31,7 @@ const sendCofirmationEmail = async (user:any) =>{
         to: `${user.email}`,
 
         subject: 'Confima tu cuenta PetSoft ',
-        html: `<h1> Bienvenidos a  PetSoft</h1>
+        html: `<h1> Bienvenidos a PetSoft</h1>
         <p> Hacé Click en el link para confirmar tu email
           <a href="${url}"> ${url} </a> </p>`
 

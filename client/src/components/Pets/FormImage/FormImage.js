@@ -54,7 +54,7 @@ function Form({ showModal, setShowModal, change }) {
                 />
               </div>
               <div className="form-element-1">
-                <label>Especie Animal</label>
+                <label>Especie</label>
                 <input
                   className="input-form"
                   name="animal"

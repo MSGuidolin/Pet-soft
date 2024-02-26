@@ -214,15 +214,15 @@ export default function PrimarySearchAppBar() {
       onClose={handleClose}
       TransitionComponent={Fade}
     >
-      <MenuItem /* onClick={handleClose} */ onClick={(e) => handleRedirect(e)}>
-        Perfil
-      </MenuItem>
       {/*   </Link> */}
       <Link
         to={'/user/provider'}
         style={{ color: 'rgb(121, 47, 111)', textDecoration: 'none' }}
       >
-        <MenuItem onClick={handleClose}>Mis Servicios</MenuItem>
+      <MenuItem /* onClick={handleClose} */ onClick={(e) => handleRedirect(e)}>
+        Perfil
+      </MenuItem>
+      <MenuItem onClick={handleClose}>Mis Servicios</MenuItem>
       </Link>
       <MenuItem onClick={handleCloseLogin}>Cerrar Sesión</MenuItem>
     </Menu>,

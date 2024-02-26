@@ -24,7 +24,6 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 //
 import "./PendingServices.scss";
-import img from "../../../img/hombre_barberia_2.jpg";
 import { useSelector } from "react-redux";
 
 const useStyles = makeStyles((theme) => ({

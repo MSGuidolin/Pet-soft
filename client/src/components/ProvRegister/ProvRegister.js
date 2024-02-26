@@ -24,18 +24,7 @@ import { Link } from "react-router-dom";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 
-function Copyright() {
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {"Copyright © "}
-            <Link color="inherit" href="/">
-                PetSoft{" "}
-            </Link>{" "}
-            {new Date().getFullYear()}
-            {"."}
-        </Typography>
-    );
-}
+
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -421,8 +410,7 @@ export default function SignUp() {
                 </form>
             </div>
             <Box mt={5}>
-                <Copyright />
-            </Box>
+                    </Box>
         </Container>
     );
 }
