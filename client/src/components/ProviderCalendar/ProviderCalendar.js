@@ -118,7 +118,7 @@ export default function ProviderCalendar({ match }) {
                 loading ? (<div>cargando...</div>) :
                     error ? (<div>error...</div>) :
                         (<div className='container'>
-                            <h1 className='title'>{`Agenda de ${provider.firstName}`}</h1>
+                            <h1 className='title'>{`Agenda de ${provider.lastName}`}</h1>
                             <div className=''>
                                 <div className='calendar-container'>
                                     <div className='calendar-division'>

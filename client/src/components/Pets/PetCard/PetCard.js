@@ -14,10 +14,11 @@ function PetCard({ image, name, age, race, animal, userID }) {
         axios.delete(`http://localhost:3002/pets/${userID}/${name}`);
     }
     const editPet = () => {
-        axios.delete(`http://localhost:3002/pets/${userID}/${name}`);
+        axios.get(`http://localhost:3002/pets/${userID}/${name}`);
+
     }
     const seePet = () => {
-        axios.delete(`http://localhost:3002/pets/${userID}/${name}`);
+        axios.get(`http://localhost:3002/pets/${userID}/${name}`);
     }
 
     return (
@@ -30,7 +31,7 @@ function PetCard({ image, name, age, race, animal, userID }) {
                     image={image}
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography textAlign="center" gutterBottom variant="h5" component="div">
                         {name}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
@@ -44,9 +45,9 @@ function PetCard({ image, name, age, race, animal, userID }) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button onClick={deletePet} size="small">Eliminar</Button>
-                    {/* <Button onClick={editPet} size="small">Editar</Button> */}
-                    {/* <Button onClick={seePet} size="small">Ver</Button> */}
+                    <Button onClick={seePet} size="small" variant="contained" color="success" >Ver</Button>
+                    <Button onClick={editPet} size="small" variant="contained" >Editar</Button>
+                    <Button onClick={deletePet} size="small" variant="contained" color="error" >Eliminar</Button>
                 </CardActions>
             </Card>
         </div>

@@ -59,7 +59,7 @@ router.post('/:id', upload.single('file'), async (req: any, res, next) => {
         }
         else {
             item.save();
-            res.redirect(`http://localhost:3000/perfil/Mascotas`);
+            res.redirect(`http://localhost:3000/pets`);
         }
     });
 });

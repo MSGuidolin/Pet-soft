@@ -173,7 +173,7 @@ app.get(
     // console.log(req.user);
     // Successful authentication, redirect home.
 
-    res.redirect(`http://localhost:3000/complete/perfil/${req.user?.id}`);
+    res.redirect(`http://localhost:3000/complete/profile/${req.user?.id}`);
   }
 );
 

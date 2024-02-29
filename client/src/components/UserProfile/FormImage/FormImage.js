@@ -78,7 +78,7 @@ function Form({ showModal, setShowModal }) {
       {showModal && (
         <div className="wrapper" ref={modalRef} onClick={closeModal}>
           <div className="form-container">
-            <form action="/upload" method="POST" encType="multipart/form-data">
+            <form action={''} method="POST" encType="multipart/form-data">
               <h3 className='modal-title'>EDITAR IMAGEN</h3>
               <div className="form-element-1">
                 <input value={image} type="file" name="file" id="file"></input>

@@ -104,7 +104,7 @@ export default function PrimarySearchAppBar() {
   const { user } = useContext(UserContext);
 
   useEffect(() => {
-    if (localStorage.getItem('loggedPettifyApp')) {
+    if (localStorage.getItem('loggedPetSoftApp')) {
       const storageData = JSON.parse(localStorage.getItem('loggedPetSoftApp'));
       console.log(storageData)
       if (storageData.userFound) {
@@ -198,10 +198,10 @@ export default function PrimarySearchAppBar() {
   </Link>,
   ];
 
-  let loginProvider = [
+  let loggedProvider = [
     <Avatar
       onClick={handleClick}
-      alt={username ? username : 'Remy Sharp'}
+      alt={username ? !username : 'User'}
       src='/static/images/avatar/1.jpg'
     >
       {render && render[0]}
@@ -222,19 +222,19 @@ export default function PrimarySearchAppBar() {
       <MenuItem /* onClick={handleClose} */ onClick={(e) => handleRedirect(e)}>
         Perfil
       </MenuItem>
-      <MenuItem onClick={handleClose}>Mis Servicios</MenuItem>
       </Link>
+      <MenuItem onClick={handleClose}>Mis Servicios</MenuItem>
       <MenuItem onClick={handleCloseLogin}>Cerrar Sesión</MenuItem>
     </Menu>,
   ];
 
-  let loginProfile =
+  let loggedClient =
     user === 'user'
       ? [
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <Avatar
             onClick={handleClick}
-            alt={username ? username : 'Remy Sharp'}
+            alt={username ? !username : 'User'}
             src='/static/images/avatar/1.jpg'
           />
           ,
@@ -246,16 +246,20 @@ export default function PrimarySearchAppBar() {
             onClose={handleClose}
             TransitionComponent={Fade}
           >
-            <MenuItem onClick={(e) => handleRedirect(e)}>Perfil</MenuItem>
-            {/*   </Link> */}
             <Link
-              to={`/perfil/Mascotas`}
+              to={`/profile`}
+              style={{ color: 'rgb(121, 47, 111)', textDecoration: 'none' }}
+            >            
+            <MenuItem onClick={(e) => handleRedirect(e)}>Perfil</MenuItem>
+            </Link>
+            <Link
+              to={`/pets`}
               style={{ color: 'rgb(121, 47, 111)', textDecoration: 'none' }}
             >
               <MenuItem onClick={handleClose}>Mis Mascotas</MenuItem>
             </Link>
             <Link
-              to={'/perfil/historial'}
+              to={'/profile/historial'}
               style={{ color: 'rgb(121, 47, 111)', textDecoration: 'none' }}
             >
               <MenuItem onClick={handleClose}>Historial De Compras</MenuItem>
@@ -279,7 +283,7 @@ export default function PrimarySearchAppBar() {
           ,
         </div>,
       ]
-      : loginProvider;
+      : loggedProvider;
 
   return (
     <div className={`${classes.grow} header`}>
@@ -300,7 +304,7 @@ export default function PrimarySearchAppBar() {
             </Link>
           </Typography>
 
-          <Link
+          {/* <Link
             to={'/search'}
             style={{
               textDecoration: 'none',
@@ -309,7 +313,7 @@ export default function PrimarySearchAppBar() {
             }}
           >
             <div style={{ marginLeft: '4rem' }}>Filtrar búsqueda</div>
-          </Link>
+          </Link> */}
 
           <Link
             to={'/about-PetSoft'}
@@ -348,7 +352,8 @@ export default function PrimarySearchAppBar() {
           <div className={classes.sectionDesktop}></div>
           <div style={{ display: 'flex', marginRight: '2rem' }}></div>
 
-          <b>{render === '' ? loginAndRegister : loginProfile}</b>
+          <b>{render === '' ? loginAndRegister : loggedClient}</b>
+
         </Toolbar>
       </AppBar>
     </div>

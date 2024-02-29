@@ -39,7 +39,7 @@ const App = () => {
       <Route exact path='/userRegister' component={UserRegister} />
       <Route exact path='/provRegister' component={ProvRegister} />
       <Route exact path='/user/provider' component={HomeProvider} />
-      <Route exact path='/complete/perfil/:id' component={CompletePerfil} />
+      <Route exact path='/complete/profile/:id' component={CompletePerfil} />
 
       <Route
         exact
@@ -57,11 +57,11 @@ const App = () => {
         component={ProviderCalendar}
       />
       <Route exact path="/providers/:id" component={ProviderDetails} />
-      <Route exact path="/profile/:id" component={UserProfile} />
+      <Route exact path="/profile" component={UserProfile} />
       <Route exact path="/search" component={Providers} />
       {/* <Route exact path="/covid" component={CovidProtocol} /> */}
-      <Route exact path="/perfil/historial" component={EventsHistory} />
-      <Route exact path="/perfil/Mascotas" component={Pets} />
+      <Route exact path="/profile/historial" component={EventsHistory} />
+      <Route exact path="/pets" component={Pets} />
       <Route exact path="/confirmation/user/:id" component={ConfirmationMail} />
       <Route
         exact

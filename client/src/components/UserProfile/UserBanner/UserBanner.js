@@ -137,7 +137,7 @@ function UserBanner() {
         </Link>
       </div>
       <div className='under-banner'>
-        <Link to='/perfil/historial' className='under-button'>
+        <Link to='/profile/historial' className='under-button'>
           Ver Historial de compras
         </Link>
       </div>

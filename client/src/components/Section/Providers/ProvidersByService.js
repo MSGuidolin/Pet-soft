@@ -31,76 +31,80 @@ export function ProvidersByService() {
     return () => {};
   }, []);
 
-  return (
-    <div className="container-main">
-      <div className="container">
-        <div className="providers-container">
-          <div className="providers-filters">
-            <div>
-              <h1 className="title">{`${serviceName}`}</h1>
-              <h4 className="title">Locales disponibles</h4>
+  // if (providers)
+  
+    return (
+      <div className="container-main">
+        <div className="container">
+          <div className="providers-container">
+            <div className="providers-filters">
+              <div>
+                <h1 className="title">Proveedores de {`${serviceName}`}</h1>
+              </div>
             </div>
+            {/* <div style={{ display: "flex", marginTop: "1rem" }}>
+              <button
+                className="card-button"
+                style={{ display: "flex", alignItems: "center" }}
+                onClick={() => masRating()}
+                // class="sort-desc"
+              >
+                <BsArrowUpShort /> Mayor Rating
+              </button>
+              <button
+                className="card-button"
+                onClick={() => menosRating()}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  marginLeft: "1rem",
+                }}
+                // class="sort-asc"
+              >
+                <BsArrowDownShort /> Menor Rating
+              </button>
+            </div> */}
+            {sortType === "default" && (
+              <div className="providers-list">
+                {providers &&
+                  providers.map((provider, index) => (
+                    <Provider
+                      key={index}
+                      provider={provider}
+                      service={serviceName}
+                    />
+                  ))}
+              </div>
+            )}
+            {sortType === "highest" && (
+              <div className="providers-list">
+                {providers &&
+                  sortRating.map((provider, index) => (
+                    <Provider
+                      key={index}
+                      provider={provider}
+                      service={serviceName}
+                    />
+                  ))}
+              </div>
+            )}
+            {sortType === "lowest" && (
+              <div className="providers-list">
+                {providers &&
+                  sortRating.map((provider, index) => (
+                    <Provider
+                      key={index}
+                      provider={provider}
+                      service={serviceName}
+                    />
+                  ))}
+              </div>
+            )}
           </div>
-          <div style={{ display: "flex", marginTop: "1rem" }}>
-            <button
-              className="card-button"
-              style={{ display: "flex", alignItems: "center" }}
-              onClick={() => masRating()}
-              // class="sort-desc"
-            >
-              <BsArrowUpShort /> Mayor Rating
-            </button>
-            <button
-              className="card-button"
-              onClick={() => menosRating()}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginLeft: "1rem",
-              }}
-              // class="sort-asc"
-            >
-              <BsArrowDownShort /> Menor Rating
-            </button>
-          </div>
-          {sortType === "default" && (
-            <div className="providers-list">
-              {providers &&
-                providers.map((provider, index) => (
-                  <Provider
-                    key={index}
-                    provider={provider}
-                    service={serviceName}
-                  />
-                ))}
-            </div>
-          )}
-          {sortType === "highest" && (
-            <div className="providers-list">
-              {providers &&
-                sortRating.map((provider, index) => (
-                  <Provider
-                    key={index}
-                    provider={provider}
-                    service={serviceName}
-                  />
-                ))}
-            </div>
-          )}
-          {sortType === "lowest" && (
-            <div className="providers-list">
-              {providers &&
-                sortRating.map((provider, index) => (
-                  <Provider
-                    key={index}
-                    provider={provider}
-                    service={serviceName}
-                  />
-                ))}
-            </div>
-          )}
         </div>
       </div>
-    </div>
-  );
+    );
+    // else return (
+
+    // );
 }
