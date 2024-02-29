@@ -10,8 +10,6 @@ import {
   Avatar,
   IconButton,
 } from '@material-ui/core';
-import Image from '../../../img/Barberia.jpg';
-// import EditIcon from '@material-ui/icons/Edit';
 import FormAdresses from '../../HomeProviders/FormAdresses/FormAdress';
 import image_profileII from '../../../img/image_profileII.jpg';
 
@@ -98,7 +96,7 @@ function ProviderProfileData({ provider, classes, data }) {
                 justifyContent='space-between'
                 direction='column'
               >
-                {data.length > 0 ? (
+                {Array.isArray(data) && data.length > 0 ? (
                   data.filter((address) => address.is_main === true)
                     .map((a) => {
                       return (

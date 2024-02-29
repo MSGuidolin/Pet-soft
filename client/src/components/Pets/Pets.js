@@ -39,6 +39,11 @@ function Pets() {
         );
     }
 
+    async function refreshPets () {
+        const Pets = await axios.get(`http://localhost:3002/pets/${userId}`)
+        setPets(Pets.data.items);
+    };
+    
     return (
         <div className='container-main'>
             <div className='container'>
@@ -52,7 +57,8 @@ function Pets() {
                 <div className='pet-container'>
                     {
                         pets.length ? pets.map((pet) => (
-                            <PetCard
+                            <PetCard 
+                                refreshPets = {refreshPets}
                                 userID={userId}
                                 image={`data:image/png;base64,${toBase64(pet.image.data.data)}`}
                                 name={pet.name}

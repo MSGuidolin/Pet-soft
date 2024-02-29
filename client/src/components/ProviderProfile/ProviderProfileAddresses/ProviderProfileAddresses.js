@@ -41,7 +41,7 @@ function ProviderProfileAddresses({ provider, classes, data }) {
               justifyContent='space-between'
               direction='column'
             >
-              {data.length > 0 ? (
+              {Array.isArray(data) && data.length > 0 ? (
                 data?.map((a) => {
                   return (
                     <>

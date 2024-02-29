@@ -7,18 +7,26 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import './PetCard.scss';
 import axios from 'axios';
+import { render } from 'react-dom';
 
-function PetCard({ image, name, age, race, animal, userID }) {
 
-    const deletePet = () => {
-        axios.delete(`http://localhost:3002/pets/${userID}/${name}`);
+
+function PetCard({ image, name, age, race, animal, userID, refreshPets }) {
+
+    const seePet = () => {
+        axios.get(`http://localhost:3002/pets/${userID}/${name}`);
     }
+    // render  VERPET
+
+    const deletePet = async () => {
+        await axios.delete(`http://localhost:3002/pets/${userID}/${name}`);
+        refreshPets()
+    }
+
+    
     const editPet = () => {
         axios.get(`http://localhost:3002/pets/${userID}/${name}`);
 
-    }
-    const seePet = () => {
-        axios.get(`http://localhost:3002/pets/${userID}/${name}`);
     }
 
     return (
