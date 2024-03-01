@@ -63,7 +63,6 @@ const CompletePerfil = () => {
     firstName: data?.firstName,
     lastName: data?.lastName,
     image: data?.image,
-    googleId: data?.googleId,
     email: data?.email,
     confirm: true,
     password: data?.password,

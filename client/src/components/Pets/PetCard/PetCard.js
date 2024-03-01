@@ -7,27 +7,45 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import './PetCard.scss';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 import { render } from 'react-dom';
 
 
 
-function PetCard({ image, name, age, race, animal, userID, refreshPets }) {
+function PetCard({ image, name, animal, race, age, sex, userID, refreshPets }) {
 
     const seePet = () => {
         axios.get(`http://localhost:3002/pets/${userID}/${name}`);
+    
+        
     }
     // render  VERPET
-
-    const deletePet = async () => {
-        await axios.delete(`http://localhost:3002/pets/${userID}/${name}`);
-        refreshPets()
-    }
-
     
     const editPet = () => {
         axios.get(`http://localhost:3002/pets/${userID}/${name}`);
 
+        // edit pet
+
+        refreshPets()
+        toast.success(
+            `Actualizaste los datos de ${name}.`,
+            {
+              position: toast.POSITION.TOP_CENTER,
+            }
+          );
     }
+
+    const deletePet = async () => {
+        await axios.delete(`http://localhost:3002/pets/${userID}/${name}`);
+        refreshPets()
+        toast.success(
+            `${name} ha sido removido de tus mascotas.`,
+            {
+              position: toast.POSITION.TOP_CENTER,
+            }
+          );
+    }
+
 
     return (
         <div className='pet-card'>
@@ -50,6 +68,9 @@ function PetCard({ image, name, age, race, animal, userID, refreshPets }) {
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                         Edad: {age}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        Sexo: {sex}
                     </Typography>
                 </CardContent>
                 <CardActions>

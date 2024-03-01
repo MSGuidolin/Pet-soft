@@ -62,9 +62,10 @@ function Pets() {
                                 userID={userId}
                                 image={`data:image/png;base64,${toBase64(pet.image.data.data)}`}
                                 name={pet.name}
-                                age={pet.age}
-                                race={pet.race}
                                 animal={pet.animal}
+                                race={pet.race}
+                                age={pet.age}
+                                sex={pet.sex}
                             />
                         )) : null
                     }

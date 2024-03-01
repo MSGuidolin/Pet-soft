@@ -9,10 +9,8 @@ export interface IUser extends Document {
   email: string;
   phone: number;
   password: string;
-  googleId: string;
   roles: any[];
   event: any[];
-  addresses: any[];
   rating: any[];
   confirm:any;
   setImage(filename: any): void;
@@ -64,9 +62,6 @@ const UserSchema = new Schema<IUser>(
       type: String,
       trim: true,
     },
-    googleId: {
-      type: String,
-    },
     roles: [
       {
         type: Schema.Types.ObjectId,
@@ -78,13 +73,6 @@ const UserSchema = new Schema<IUser>(
       {
         type: Schema.Types.ObjectId,
         ref: "Events",
-      },
-    ],
-    addresses: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "Addresses",
-        autopopulate: true,
       },
     ],
   },

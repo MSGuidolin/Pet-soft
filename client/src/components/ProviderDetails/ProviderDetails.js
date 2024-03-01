@@ -22,7 +22,7 @@ const ProviderDetails = () => {
       <div className="container">
         <h1 className="title">
           {providerDetails.data &&
-            `Bienvenido a ${providerDetails.data.lastName}`}
+            `${providerDetails.data.firstName} ${providerDetails.data.lastName}`}
         </h1>
         <div>
           {providerDetails.data?.image !== undefined ? (

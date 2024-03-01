@@ -52,7 +52,7 @@ function Footer() {
           className={classes.containerFooterCopyright}
         >
           <span className={classes.footerCopyright}>
-            © Copyright 2021 <a href="/about-Us">CESIT</a>
+            © Copyright 2021-2024 <a href="/about-Us">CESIT</a>
           </span>
         </Grid>
 
@@ -63,7 +63,7 @@ function Footer() {
           alignItems="center"
           style={{ width: "35%" }}
         >
-          <Grid item container justifyContent='center' alignItems="center" className={classes.containerFooterLinks}>
+          {/* <Grid item container justifyContent='center' alignItems="center" className={classes.containerFooterLinks}>
             <Grid item>
               <Link to="/login">
                 <p>Ingresar</p>
@@ -96,11 +96,11 @@ function Footer() {
                 <p>Sobre nosotros</p>
               </Link>
             </Grid>
-          </Grid>
+          </Grid> */}
         </Grid>
 
       </Grid>
-    </Grid>
+    </Grid> 
   );
 }
 

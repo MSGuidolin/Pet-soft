@@ -164,7 +164,7 @@ export default function RecipeReviewCard({ data }) {
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
-          <IconButton
+          {/* <IconButton
             aria-label="add to favorites"
             onClick={handleFavorites}
             className={stateFav ? classes.favorite : ""}
@@ -179,7 +179,7 @@ export default function RecipeReviewCard({ data }) {
             target="_blank"
           >
             <WhatsAppIcon />
-          </IconButton>
+          </IconButton> */}
 
           {data.addresses && (
             <IconButton aria-label="location">

@@ -61,9 +61,10 @@ passport.use(JWTStrategy);
 
 //   var obj = {
 //     name: req.body.name,
+//     animal: req.body.animal,
 //     race: req.body.race,
 //     age: req.body.age,
-//     animal: req.body.animal,
+//     sex. req.body.sex,
 //     image: {
 //       data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
 //       contentType: 'image/png'
@@ -123,15 +124,11 @@ passport.use(
       profile: any,
       cb: any
     ) {
-      //   Users.find({ googleId: profile.id }, function (err, user) {
-      //     return cb(err, user);
-      //   });
       const defaultUser = {
         firstName: profile.name.givenName,
         lastName: profile.name.familyName,
         email: profile.emails[0].value,
         image: profile.photos[0].value,
-        googleId: profile.id,
         password: profile.emails[0].value,
         confirm: true,
       };

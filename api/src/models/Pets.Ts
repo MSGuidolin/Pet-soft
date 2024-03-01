@@ -7,15 +7,19 @@ const PetSchema = new Schema(
             trim: true,
             required: true,
         },
+        animal: {
+            type: String,
+        },
         race: {
             type: String,
         },
         age: {
             type: Number,
         },
-        animal: {
+        sex: {
             type: String,
         },
+
         image: {
             data: Buffer,
             contentType: String

@@ -20,7 +20,7 @@ export default function Banner() {
       >
         <h1>PetSoft</h1>
         <p>
-          Hacemos todo por tu mascota!.
+          ¡Un lugar para cuidar a tu amigo peludo!
         </p>
       </div>
 

@@ -193,7 +193,7 @@ export default function PrimarySearchAppBar() {
     }}
   >
     <Button style={{ fontSize: '16px', fontWeight: 'bold' }} color='inherit'>
-      REGISTRAR VETERINARIA{' '}
+      REGISTRAR PROVEEDOR{' '}
     </Button>
   </Link>,
   ];

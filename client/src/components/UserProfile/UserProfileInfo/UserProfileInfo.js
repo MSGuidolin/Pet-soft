@@ -64,7 +64,7 @@ function UserProfileInfo() {
           <p className="p">Telefono: {userData && userData.phone}</p>
         </div>
         <br></br>
-        <div className="profile-info">
+        {/* <div className="profile-info">
           <div className="profile-header">
             <h1>MIS DIRECCIONES</h1>
 
@@ -85,7 +85,7 @@ function UserProfileInfo() {
           <div className="acordion-container">
             <AccordionPrueba setChange={() => { setChange(!change) }} change={change} />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

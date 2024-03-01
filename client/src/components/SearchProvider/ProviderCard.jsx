@@ -103,11 +103,11 @@ export default function RecipeReviewCard({ data }) {
               <h1>{`${data.addresses[0]?.city} / ${data.addresses[0]?.state} `}</h1>
             </div>
             {data.services &&
-              "Haz click en la flecha hacia abajo para ver MÁS..."}
+              "Haz click en la flecha hacia abajo para ver más..."}
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
-          <IconButton
+          {/* <IconButton
             aria-label="add to favorites"
             onClick={handleFavorites}
             className={stateFav ? classes.favorite : ""}
@@ -121,7 +121,7 @@ export default function RecipeReviewCard({ data }) {
             href={whatsApp}
           >
             <WhatsAppIcon />
-          </IconButton>
+          </IconButton> */}
 
           {data.addresses && (
             <IconButton aria-label="location">

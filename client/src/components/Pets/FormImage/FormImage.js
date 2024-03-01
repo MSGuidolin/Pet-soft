@@ -41,6 +41,7 @@ function Form({ showModal, setShowModal, change }) {
           <div className="form-container">
             <form action={`http://localhost:3002/pets/${userId}`} method="POST" encType="multipart/form-data">
               <h3 className='modal-title'>AÑADIR NUEVA MASCOTA</h3>
+
               <div className="form-element-1">
                 <label>Nombre</label>
                 <input
@@ -53,30 +54,31 @@ function Form({ showModal, setShowModal, change }) {
                   }
                 />
               </div>
+
               <div className="form-element-1">
                 <label>Especie</label>
-                <input
-                  className="input-form"
-                  name="animal"
-                  type="string"
-                  placeholder="Especie"
-                  onChange={(e) =>
-                    setInput({ ...input, animal: e.target.value })
-                  }
-                />
+                <br></br>
+                <select name="animal" type="string" required>
+                  <option value="Gato">Gato</option>
+                  <option value="Perro">Perro</option>
+                  <option value="Ave">Ave</option>
+                  <option value="Otro">Otro</option>
+                </select>
               </div>
+
               <div className="form-element-1">
                 <label>Raza</label>
                 <input
                   className="input-form"
                   name="race"
                   type="string"
-                  placeholder="raza de la Mascota"
+                  placeholder="Raza de la Mascota"
                   onChange={(e) =>
                     setInput({ ...input, race: e.target.value })
                   }
                 />
               </div>
+
               <div className="form-element-1">
                 <label>Edad</label>
                 <input
@@ -89,6 +91,16 @@ function Form({ showModal, setShowModal, change }) {
                   }
                 />
               </div>
+
+              <div className="form-element-1">
+                <label>Sexo</label>
+                <br></br>
+                <input type="radio" id="male" name="sex" value="Macho"/>
+                  <label for="male">Macho          </label>
+                <input type="radio" id="female" name="sex" value="Hembra"/>
+                  <label for="female">Hembra</label>
+              </div>
+
               <div className="form-element-1">
                 <label>Foto</label>
                 <input value={image} type="file" name="file" id="file"></input>
@@ -97,6 +109,7 @@ function Form({ showModal, setShowModal, change }) {
               <div className="center-modal-test">
                 <button type="submit" className="button">CREAR</button>
               </div>
+
             </form>
           </div>
         </div>

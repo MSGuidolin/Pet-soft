@@ -5,13 +5,10 @@ export interface IProvider extends Document {
   image: string;
   firstName: string;
   lastName: string;
-  gender: string;
   email: string;
   phone: number;
   password: string;
   bio: string;
-  age: number;
-  googleId: string;
   roles: any[];
   hasCalendar: any;
   addresses: any[];
@@ -37,10 +34,6 @@ const ProvidersSchema = new Schema<IProvider>(
       required: true,
       trim: true,
     },
-    gender: {
-      type: String,
-      enum: ["Male", "Female", "Unkwown"],
-    },
     email: {
       type: String,
       required: true,
@@ -61,13 +54,6 @@ const ProvidersSchema = new Schema<IProvider>(
     bio: {
       type: String,
       trim: true,
-    },
-    age: {
-      type: Number,
-      trim: true,
-    },
-    googleId: {
-      type: String,
     },
     roles: [
       {

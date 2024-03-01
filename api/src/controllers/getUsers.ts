@@ -31,20 +31,6 @@ export const getUser: RequestHandler = async (req, res) => {
   }
 };
 
-export const getUserGoogle: RequestHandler = async (req, res) => {
-  // para traer un solo usuario
-  try {
-    const userFound = await Users.findOne({ googleId: req.params.id });
-    if (!userFound)
-      return res
-        .json(404)
-        .json({ message: 'No encontramos el usuario solicitado' });
-    return res.json(userFound);
-  } catch (error) {
-    res.json(error);
-  }
-};
-
 export const updateUser: RequestHandler = async (req, res) => {
   try {
     const userUpdate: any = await Users.findByIdAndUpdate(
@@ -67,20 +53,6 @@ export const updateUser: RequestHandler = async (req, res) => {
 
 export const deleteUser: RequestHandler = async (req, res) => {
   try {
-    if (/^(?:[1-9]\d*|\d)$/.test(req.params.id)) {
-      const userDel = await Users.findOneAndDelete({ googleId: req.params.id });
-      if (!userDel)
-        return res
-          .status(404)
-          .json({ message: 'No encontramos el usuario solicitado' });
-      else {
-        // await fs.unlink(path.resolve(userDel.image));
-        return res.json({
-          message: 'Usuario eliminado con éxito.',
-          userDel,
-        });
-      }
-    }
     const userDelete = await Users.findByIdAndDelete(req.params.id);
     if (!userDelete)
       return res

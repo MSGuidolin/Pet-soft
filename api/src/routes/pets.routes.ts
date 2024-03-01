@@ -52,9 +52,10 @@ router.post('/:id', upload.single('file'), async (req: any, res, next) => {
 
     var obj = {
         name: req.body.name,
+        animal: req.body.animal,
         race: req.body.race,
         age: req.body.age,
-        animal: req.body.animal,
+        sex: req.body.sex,
         image: {
             data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
             contentType: 'image/png'
