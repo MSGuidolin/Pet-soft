@@ -12,7 +12,7 @@ import config from './config';
 import Users from './models/Users';
 import Providers from './models/Providers';
 import Pets from "./models/Pets";
-import fs from 'fs';
+// import fs from 'fs';
 
 const app: Application = express();
 createRoles();
