@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-import { putUserData } from "../../../Redux/actions/user.actions";
 import { GET_USERS } from "../../../utils/constants";
 import { validate } from "../../../utils/validate-user-profile";
 import "./Form.css";

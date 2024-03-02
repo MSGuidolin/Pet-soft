@@ -107,11 +107,11 @@ export const getEventsByRole: RequestHandler = async (req, res) => {
         hour: event.hour,
         date: event.date,
         address: {
-          country: event.address.country,
-          state: event.address.state,
+          street: event.address.street,
+          number: event.address.number,
           city: event.address.city,
-          address_1: event.address.address_1,
-          address_details: event.address.address_details,
+          state: event.address.state,
+          country: event.address.country,
           zip_code: event.address.zip_code,
         },
         pet: {
@@ -119,6 +119,7 @@ export const getEventsByRole: RequestHandler = async (req, res) => {
           animal: event.pet.animal,
           race: event.pet.race,
           age: event.pet.age,
+          sex: event.pet.sex,
         },
         service: {
           name: event.service.name,
@@ -134,7 +135,6 @@ export const getEventsByRole: RequestHandler = async (req, res) => {
         provider: {
           firstName: eventProvider?.firstName,
           lastName: eventProvider?.lastName,
-          gender: eventProvider?.gender,
           phone: eventProvider?.phone,
         },
       };

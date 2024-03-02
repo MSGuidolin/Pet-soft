@@ -17,7 +17,6 @@ export const signUp: RequestHandler = async (req, res) => {
     email,
     phone,
     password,
-    googleId,
     roles,
     confirm,
 
@@ -29,7 +28,7 @@ export const signUp: RequestHandler = async (req, res) => {
       .status(400)
       .json({ message: 'Please, send your email and password' });
 
-  if (roles === 'user' && !googleId) {
+  if (roles === 'user') {
     const userFound = await Users.findOne({ email: email }); // busco en la db
     if (userFound)
       return res.status(301).json({ message: 'The user alredy exists' });
@@ -72,7 +71,7 @@ export const signUp: RequestHandler = async (req, res) => {
     return res.status(201).json(savedUser);
   }
 
-  if (roles === 'provider' || googleId) {
+  if (roles === 'provider') {
     try {
       const foundProv = await Providers.findOne({ email: req.body.email });
 
@@ -86,11 +85,9 @@ export const signUp: RequestHandler = async (req, res) => {
         image,
         firstName,
         lastName,
-        gender,
         email,
         phone,
         password,
-        googleId,
         roles,
         confirm,
         hasCalendar,
@@ -107,7 +104,6 @@ export const signUp: RequestHandler = async (req, res) => {
         email,
         phone,
         password,
-        googleId,
         confirm,
         // hasCalendar,
       };

@@ -2,10 +2,6 @@ import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
-import {
-  postUserAddresses,
-  putUserData,
-} from "../../../Redux/actions/user.actions";
 import { GET_USERS } from "../../../utils/constants";
 import { validateAddress } from "../../../utils/validate-addresses";
 import "./Form.css";

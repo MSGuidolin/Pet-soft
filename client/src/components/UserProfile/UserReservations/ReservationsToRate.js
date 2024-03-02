@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  deleteUserAddresses,
-  editUserAddresses,
-  getUserAddresses,
   getUserReservations,
 } from "../../../Redux/actions/user.actions";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
@@ -63,13 +60,13 @@ function ReservationsToRate() {
                     <b>Servicio Contratado:</b> {r.service.name}
                   </p>
                   <span>
-                    {selected == i ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                    {selected === i ? <IoIosArrowUp /> : <IoIosArrowDown />}
                   </span>
                 </div>
                 <div
                   className={
 
-                    selected == i
+                    selected === i
                       ? `accordion-description-show`
                       : `accordion-description`
                   }

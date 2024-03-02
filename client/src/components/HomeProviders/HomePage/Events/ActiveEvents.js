@@ -92,10 +92,9 @@ function ActiveEvents() {
                                                 Cliente: {r.user.firstName} {r.user.lastName}
                                             </p>
                                             <p className="p">Teléfono: {r.user.phone}</p>
-                                            <p className="p">{`Dirección: ${r.address.address_1}, ${r.address.city}, ${r.address.state}
-                                            , ${r.address.country}`}
+                                            <p className="p">{`Dirección: ${r.address.street} ${r.address.number}, ${r.address.city}`}
                                             </p>
-                                            <p className="p">Detalles: {r.address.address_details}</p>
+                                            {/* <p className="p">Detalles: {r.address.address_details}</p> */}
                                             <div className='center-target-button'>
                                                 <button onClick={() => deleteReservation(r._id)} className="cancel-button" >
                                                     Cancelar Turno
@@ -138,10 +137,9 @@ function ActiveEvents() {
                                                 Cliente: {r.user.firstName} {r.user.lastName}
                                             </p>
                                             <p className="p">Teléfono: {r.user.phone}</p>
-                                            <p className="p">{`Dirección: ${r.address.address_1}, ${r.address.city}, ${r.address.state}
-                                            , ${r.address.country}`}
+                                            <p className="p">{`Dirección: ${r.address.street} ${r.address.number}, ${r.address.city}`}
                                             </p>
-                                            <p className="p">Detalles: {r.address.address_details}</p>
+                                            {/* <p className="p">Detalles: {r.address.address_details}</p> */}
                                             <div className='center-target-button'>
                                                 <button onClick={() => checkDelete(r._id)} className="check-button" >
                                                     Aceptar
@@ -184,10 +182,9 @@ function ActiveEvents() {
                                                 Cliente: {r.user.firstName} {r.user.lastName}
                                             </p>
                                             <p className="p">Teléfono: {r.user.phone}</p>
-                                            <p className="p">{`Dirección: ${r.address.address_1}, ${r.address.city}, ${r.address.state}
-                                            , ${r.address.country}`}
+                                            <p className="p">{`Dirección: ${r.address.street} ${r.address.number}, ${r.address.city}`}
                                             </p>
-                                            <p className="p">Detalles: {r.address.address_details}</p>
+                                            {/* <p className="p">Detalles: {r.address.address_details}</p> */}
                                             <div className='center-target-button'>
                                             </div>
                                         </div>

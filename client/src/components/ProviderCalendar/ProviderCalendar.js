@@ -207,7 +207,7 @@ export default function ProviderCalendar({ match }) {
                                             <div className='modal'>
                                                 <div className='modal-content'>
                                                     <h2>Usuario no registrado</h2>
-                                                    <p>Debe estar registrado y logeado para poder añadir reservaciones a la bolsa de compras</p>
+                                                    <p>Debe estar registrado y logueado para poder añadir reservaciones a la bolsa de compras</p>
                                                     <button
                                                         className='modal-button left'
                                                         onClick={() => setInvalid(false)}

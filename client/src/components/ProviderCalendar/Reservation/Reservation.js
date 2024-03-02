@@ -106,14 +106,14 @@ export default function Reservation({ handleActive, date, hour, provider, servic
                     check = false;
                     setData({
                         ...data,
-                        address: ad.name
+                        address: ad.street
                     })
                 }
             })
             if (check) {
                 setData({
                     ...data,
-                    address: addresses[0].name
+                    address: addresses[0].street
                 })
             }
         };
@@ -157,7 +157,6 @@ const handleAdd2 = (e) => {
 const dispatch = useDispatch();
 
 const handleAccept = async () => {
-    if (data.address !== '') {
         if(data.pet !== '') {
             handleClickModal()
             dispatch(reservationStatus(data));
@@ -167,11 +166,6 @@ const handleAccept = async () => {
                 position: toast.POSITION.TOP_CENTER
             })
         }
-    } else {
-        toast.error('Error al agregar el turno, por favor ingrese una dirección', {
-            position: toast.POSITION.TOP_CENTER
-        })
-    }
 }
 
 return (
@@ -201,47 +195,6 @@ return (
                     <tr>
                         <td>Precio</td>
                         <td>{`$${price}`}</td>
-                    </tr>
-                    <tr>
-                        <td>Dirección</td>
-                        <td className='td-address'>
-                            <span>
-                                {addresses && addresses.length ? data.address : 'Ninguna'}
-                            </span>
-                            <span>
-                                <Button aria-controls="address-menu" aria-haspopup="true" onClick={handleClick}>
-                                    <HomeWorkTwoToneIcon className='modal-icon' />
-                                </Button>
-                                <Menu
-                                    id="address-menu"
-                                    anchorEl={anchorEl}
-                                    keepMounted
-                                    open={open}
-                                    onClose={handleClose}
-                                    TransitionComponent={Fade}
-                                >
-                                    {
-                                        addresses && addresses.length && addresses.map((el, index) => (
-                                            <MenuItem onClick={(e) => handleChange(e)} key={index} value={el.name}>{el.name}</MenuItem>
-                                        ))
-                                    }
-                                </Menu>
-                                <Button aria-controls="add-menu" aria-haspopup="true" onClick={handleClick2}>
-                                    <AddIcon className='modal-icon' />
-                                </Button>
-                                <Menu
-                                    id="add-menu"
-                                    anchorEl={anchorEl2}
-                                    keepMounted
-                                    open={open2}
-                                    onClose={handleClose2}
-                                    TransitionComponent={Fade}
-                                >
-                                    <MenuItem onClick={() => handleAdd()}>Crear dirección</MenuItem>
-                                </Menu>
-                            </span>
-                            <FormAddresses showModal={addModal} setShowModal={setAddModal} setChange={() => setChange(!change)} />
-                        </td>
                     </tr>
                     <tr>
                         <td>Mascota</td>

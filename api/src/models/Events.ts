@@ -48,11 +48,6 @@ const EventSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "Calendar",
     },
-    address: {
-      type: Schema.Types.ObjectId,
-      ref: "Addresses",
-      autopopulate: true,
-    },
     pet: {
       type: Schema.Types.ObjectId,
       ref: "Pets",
