@@ -10,7 +10,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import AddIcon from '@material-ui/icons/Add';
 import FormAddresses from '../../UserProfile/Form/FormAddresses';
 import { toast } from 'react-toastify';
-import HomeWorkTwoToneIcon from '@material-ui/icons/HomeWorkTwoTone';
+import PetsIcon from '@material-ui/icons/Pets';
 import FormImage from '../../Pets/FormImage/FormImage';
 
 export default function Reservation({ handleActive, date, hour, provider, service, price, handleClickModal, providerID }) {
@@ -106,14 +106,14 @@ export default function Reservation({ handleActive, date, hour, provider, servic
                     check = false;
                     setData({
                         ...data,
-                        address: ad.street
+                        address: ad.city
                     })
                 }
             })
             if (check) {
                 setData({
                     ...data,
-                    address: addresses[0].street
+                    address: addresses[0].city
                 })
             }
         };
@@ -204,7 +204,7 @@ return (
                             </span>
                             <span>
                                 <Button aria-controls="pet-menu" aria-haspopup="true" onClick={handleClick3}>
-                                    <HomeWorkTwoToneIcon className='modal-icon' />
+                                    <PetsIcon className='modal-icon' />
                                 </Button>
                                 <Menu
                                     id="pet-menu"
@@ -240,6 +240,8 @@ return (
                 </tbody>
                 <p>IMPORTANTE*</p>
                 <p>El turno se añadirá a la bolsa de pago, pero estará disponible para otros usuarios hasta que se complete el pago del mismo.*</p>
+                <br/>
+            
             </div>
             <button
                 className='modal-button left'

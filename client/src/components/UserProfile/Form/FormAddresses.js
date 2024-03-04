@@ -29,9 +29,9 @@ function FormAddresses({ showModal, setShowModal, setChange }) {
     country: "",
     state: "",
     city: "",
-    address_1: "",
+    direction: "",
     address_details: "",
-    zip_code: "",
+    postal_code: "",
     is_main: false
   });
 
@@ -146,13 +146,13 @@ function FormAddresses({ showModal, setShowModal, setChange }) {
               />
             </div>
             <div>
-              <label>Calle: </label>
+              <label>Dirección: </label>
               <input
-                className={errors.address_1 && "danger"}
-                name="address_1"
+                className={errors.direction && "danger"}
+                name="direction"
                 type="text"
-                value={input.address_1}
-                placeholder="Ingrese la Calle"
+                value={input.direction}
+                placeholder="Ingrese la Dirección"
                 onChange={(e) => handleInputChange(e.target)}
               />
             </div>
@@ -172,18 +172,18 @@ function FormAddresses({ showModal, setShowModal, setChange }) {
             <div>
               <label>Codigo Postal: </label>
               <input
-                className={errors.zip_code && "danger"}
-                name="zip_code"
+                className={errors.postal_code && "danger"}
+                name="postal_code"
                 type="text"
-                value={input.zip_code}
+                value={input.postal_code}
                 placeholder="Ingrese el código postal"
                 onChange={(e) => handleInputChange(e.target)}
               />
             </div>
             <span className='main_address'>
-              <label>Direccion Principal: </label>
+              <label>Dirección Principal: </label>
               <input
-                className={errors.zip_code && "danger"}
+                className={errors.postal_code && "danger"}
                 name="is_main"
                 type="checkbox"
                 onChange={(e) => handleMain(e)}

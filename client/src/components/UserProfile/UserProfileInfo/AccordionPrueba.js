@@ -85,10 +85,9 @@ function AccordionPrueba({ change, setChange }) {
                   <p className="p">País: {a.country}</p>
                   <p className="p">Provincia: {a.state}</p>
                   <p className="p">Ciudad: {a.c}</p>
-                  <p className="p">Direccion: {a.address_1}</p>
-                  <p className="p">Aclaracion: {a.address_details}</p>
-                  <p className="p">Codigo Postal: {a.zip_code}</p>
-                  <p className="p">Direccion Principal: {a.is_main ? "Si" : "No"}</p>
+                  <p className="p">Dirección: {a.direction}</p>
+                  <p className="p">Detalles: {a.address_details}</p>
+                  <p className="p">Codigo Postal: {a.postal_code}</p>
                 </div>
               )}
               <div className="accordion-item-options">

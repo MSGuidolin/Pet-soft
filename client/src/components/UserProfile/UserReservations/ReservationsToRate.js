@@ -79,10 +79,9 @@ function ReservationsToRate() {
                       <p className="p">
                         Prestador: {r.provider.firstName} {r.provider.lastName}
                       </p>
-                      <p className="p">{`Dirección: ${r.address.address_1}, ${r.address.city}, ${r.address.state}
-                                            , ${r.address.country}`}
-                                            </p>
-                                            <p className="p">Detalles: {r.address.address_details}</p>
+                      <p className="p">{`Dirección: ${r.address.direction}, ${r.address.city}`}
+                      </p>
+                      {r.address.address_details && <p className="p">Detalles: {r.address.address_details}</p>}
                       <div className='center-target-button'>
                         <button className="review-button" onClick={() => setShowModal({ [i]: true })}>
                           Calificar al Prestador

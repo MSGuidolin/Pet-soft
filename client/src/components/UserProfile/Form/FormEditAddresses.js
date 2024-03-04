@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { validateAddress } from "../../../utils/validate-addresses";
 import { GET_USERS } from "../../../utils/constants";
-import "./FormEditAdresses.css";
+import "./FormEditAddresses.css";
 import { toast } from 'react-toastify';
 
 function FormEditAddresses({ editAddressModal, setEditAddressModal, addressId, data, setChange }) {
@@ -14,12 +14,12 @@ function FormEditAddresses({ editAddressModal, setEditAddressModal, addressId, d
 
   const [input, setInput] = useState({
     name: data.name,
-    country: data.country,
-    state: data.state,
-    city: data.city,
-    address_1: data.address_1,
+    direction: data.direction,
     address_details: data.address_details,
-    zip_code: data.zip_code,
+    city: data.city,
+    state: data.state,
+    country: data.country,
+    postal_code: data.postal_code,
     is_main: data.is_main,
   });
 
@@ -138,16 +138,16 @@ function FormEditAddresses({ editAddressModal, setEditAddressModal, addressId, d
               {errors.city && <p className="danger">{errors.city}</p>}
             </div>
             <div>
-              <label>*Calle: </label>
+              <label>*Dirección: </label>
               <input
-                className={errors.address_1 && "danger"}
-                name="address_1"
+                className={errors.direction && "danger"}
+                name="direction"
                 type="text"
-                value={input.address_1}
+                value={input.direction}
                 onChange={(e) => handleInputChange(e.target)}
               />
-              {errors.address_1 && (
-                <p className="danger">{errors.address_1}</p>
+              {errors.direction && (
+                <p className="danger">{errors.direction}</p>
               )}
             </div>
 
@@ -168,16 +168,16 @@ function FormEditAddresses({ editAddressModal, setEditAddressModal, addressId, d
             <div>
               <label>*Codigo Postal: </label>
               <input
-                className={errors.zip_code && "danger"}
-                name="zip_code"
+                className={errors.postal_code && "danger"}
+                name="postal_code"
                 type="text"
-                value={input.zip_code}
+                value={input.postal_code}
                 onChange={(e) => handleInputChange(e.target)}
               />
-              {errors.zip_code && <p className="danger">{errors.zip_code}</p>}
+              {errors.postal_code && <p className="danger">{errors.postal_code}</p>}
             </div>
             <span className='main_address'>
-              <label>Direccion Principal: </label>
+              <label>Dirección Principal: </label>
               <input
                 name="is_main"
                 type="checkbox"

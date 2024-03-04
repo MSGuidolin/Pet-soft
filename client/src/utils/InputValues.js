@@ -8,28 +8,28 @@ export const inputFieldValues =  [
         helperText:'name'
     },
     {
-        value:'address_1',
-        name:'address_1',
+        value:'direction',
+        name:'direction',
         label:'Dirección',
         type:'text',
-        error:'address_1',
-        helperText:'address_1'
+        error:'direction',
+        helperText:'direction'
     },
     {
         value:'address_details',
         name:'address_details',
-        label:'Piso/Dpto',
+        label:'Detalles',
         type:'text',
         error:'address_details',
         helperText:'address_details'
     },
     {
-        value:'zip_code',
-        name:'zip_code',
+        value:'postal_code',
+        name:'postal_code',
         label:'Código Postal',
         type:'number',
-        error:'zip_code',
-        helperText:'zip_code'
+        error:'postal_code',
+        helperText:'postal_code'
     },
     {
         value:'country',

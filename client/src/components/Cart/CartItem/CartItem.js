@@ -106,9 +106,9 @@ function CartItem({ data, itemLoading }) {
                                 <Typography variant="body2" gutterBottom>
                                     {`Fecha: ${data.date} - ${data.hour}:00hs`}
                                 </Typography>
-                                <Typography variant="body2" color="textSecondary">
+                                {/* <Typography variant="body2" color="textSecondary">
                                     {`Dirección: ${data.address}`}
-                                </Typography>
+                                </Typography> */}
                             </Grid>
                         </Grid>
                     </Grid>

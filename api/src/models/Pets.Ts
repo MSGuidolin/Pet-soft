@@ -9,15 +9,19 @@ const PetSchema = new Schema(
         },
         animal: {
             type: String,
+            required: true,
         },
         race: {
             type: String,
+            required: true,
         },
         age: {
             type: Number,
+            required: true,
         },
         sex: {
             type: String,
+            required: true,
         },
 
         image: {
@@ -27,6 +31,7 @@ const PetSchema = new Schema(
         user: {
             type: Schema.Types.ObjectId,
             ref: "Users",
+            required: true,
         },
     },
     { versionKey: false, timestamps: true }

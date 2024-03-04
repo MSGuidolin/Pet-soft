@@ -96,10 +96,9 @@ function AccordionReservations() {
                       <p className="p">
                         Mascota: {r.pet.name}
                       </p>
-                      <p className="p">{`Dirección: ${r.address.address_1}, ${r.address.city}, ${r.address.state}
-                                            , ${r.address.country}`}
+                      <p className="p">{`Dirección: ${r.address.direction}, ${r.address.city}`}
                       </p>
-                      <p className="p">Detalles: {r.address.address_details}</p>
+                      {r.address.address_details && <p className="p">Detalles: {r.address.address_details}</p>}
                       <div className='center-target-button'>
                         <button onClick={() => deleteReservation(r._id)} className="cancel-button" >
                           Cancelar Turno
@@ -144,10 +143,9 @@ function AccordionReservations() {
                       <p className="p">
                         Mascota: {r.pet.name}
                       </p>
-                      <p className="p">{`Dirección: ${r.address.address_1}, ${r.address.city}, ${r.address.state}
-                                            , ${r.address.country}`}
+                      <p className="p">{`Dirección: ${r.address.direction}, ${r.address.city}`}
                       </p>
-                      <p className="p">Detalles: {r.address.address_details}</p>
+                      {r.address.address_details && <p className="p">Detalles: {r.address.address_details}</p>}
                       <div className='center-target-button'>
                         <button onClick={() => checkDelete(r._id)} className="check-button" >
                           Aceptar

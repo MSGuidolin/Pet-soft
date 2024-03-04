@@ -3,26 +3,18 @@ import defaultImg from "../../../img/wall-cart.jpg";
 import { BsFillPlusCircleFill, BsPencilSquare } from "react-icons/bs";
 import Form from "../Form/Form";
 import FormImage from "../FormImage/FormImage";
-import FormAddresses from "../Form/FormAddresses.js";
-import {
-  getUserAddresses,
-  getUserProfile,
-} from "../../../Redux/actions/user.actions";
 import { useDispatch, useSelector } from "react-redux";
 import "./UserProfileInfo.css";
 import AccordionPrueba from "./AccordionPrueba";
 
 function UserProfileInfo() {
-  const [newAddressInfo, setnewAddressInfo] = useState({});
   const [showModal, setShowModal] = useState(false);
   const [ImageModal, setImageModal] = useState(false);
-  const [addressModal, setAddressModal] = useState(false);
   const [userID, setUserID] = useState("");
   const [change, setChange] = useState(false);
 
   const dispatch = useDispatch();
   const userData = useSelector((state) => state.userData.data);
-  const userAddresses = useSelector((state) => state.userAddresses.data);
 
   useEffect(() => {
     if (window.localStorage.getItem("loggedPetSoftApp")) {
@@ -34,13 +26,6 @@ function UserProfileInfo() {
       }
     }
   }, []);
-
-  useEffect(() => {
-    if (userID !== '') {
-      dispatch(getUserProfile(userID));
-      dispatch(getUserAddresses(userID));
-    }
-  }, [userID, showModal]);
 
   return (
     <div>
@@ -64,28 +49,6 @@ function UserProfileInfo() {
           <p className="p">Telefono: {userData && userData.phone}</p>
         </div>
         <br></br>
-        {/* <div className="profile-info">
-          <div className="profile-header">
-            <h1>MIS DIRECCIONES</h1>
-
-            <FormAddresses
-              setChange={() => { setChange(!change) }}
-              showModal={addressModal}
-              setShowModal={setAddressModal}
-              newAddressInfo={newAddressInfo}
-              setnewAddressInfo={setnewAddressInfo}
-            />
-            <BsFillPlusCircleFill
-              className="profile-icon"
-              onClick={setAddressModal}
-            />
-          </div>
-          <hr />
-          <hr />
-          <div className="acordion-container">
-            <AccordionPrueba setChange={() => { setChange(!change) }} change={change} />
-          </div>
-        </div> */}
       </div>
     </div>
   );

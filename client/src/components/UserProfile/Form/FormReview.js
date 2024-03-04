@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
@@ -6,8 +5,6 @@ import {
   getUserReservations,
   postUserReview,
 } from "../../../Redux/actions/user.actions";
-
-import { validate } from "../../../utils/validate-user-profile";
 import "./FormReview.css";
 
 const ID = window.localStorage.getItem("loggedPetSoftApp")

@@ -15,7 +15,7 @@ import {
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-import FormAdresses from '../../HomeProviders/FormAdresses/FormAdress';
+import FormAddresses from '../../HomeProviders/FormAddresses/FormAddress';
 
 function ProviderProfileAddresses({ provider, classes, data }) {
   // const dispatch = useDispatch();
@@ -51,7 +51,7 @@ function ProviderProfileAddresses({ provider, classes, data }) {
                         </AccordionSummary>
                         <hr />
                         <AccordionDetails>
-                          <Typography variant='h7'>{a.address_1}</Typography>
+                          <Typography variant='h7'>{a.direction}</Typography>
                         </AccordionDetails>
                         <AccordionDetails>
                           {a.address_details ? (
@@ -71,7 +71,7 @@ function ProviderProfileAddresses({ provider, classes, data }) {
                         <AccordionActions>
                           <Avatar className={classes.icon}>
                             <IconButton>
-                              <FormAdresses type='addresses' data={data} />
+                              <FormAddresses type='addresses' data={data} />
                             </IconButton>
                           </Avatar>
                         </AccordionActions>

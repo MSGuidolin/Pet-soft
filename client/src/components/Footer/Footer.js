@@ -56,14 +56,14 @@ function Footer() {
           </span>
         </Grid>
 
-        <Grid
+        {/* <Grid
           item
           container
           justifyContent="center"
           alignItems="center"
-          style={{ width: "35%" }}
+          style={{ width: "100%" }}
         >
-          {/* <Grid item container justifyContent='center' alignItems="center" className={classes.containerFooterLinks}>
+          <Grid item container justifyContent='center' alignItems="center" className={classes.containerFooterLinks}>
             <Grid item>
               <Link to="/login">
                 <p>Ingresar</p>
@@ -96,11 +96,11 @@ function Footer() {
                 <p>Sobre nosotros</p>
               </Link>
             </Grid>
-          </Grid> */}
-        </Grid>
+          </Grid> 
+        </Grid>*/}
 
       </Grid>
-    </Grid> 
+    </Grid>
   );
 }
 

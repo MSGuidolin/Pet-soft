@@ -12,7 +12,7 @@ import {
   IconButton,
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import FormAdresses from '../FormAdresses/FormAdress';
+import FormAddresses from '../FormAddresses/FormAddress';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import MaterialUIPickers from '../SelectHour/SelectorHour';
@@ -63,7 +63,7 @@ function ServicesProvider({ provider, classes, data, alldata, type }) {
                   <AccordionActions>
                     <Avatar>
                       <IconButton className={classes.icon}>
-                        <FormAdresses type='service' alldata={alldata} />
+                        <FormAddresses type='service' alldata={alldata} />
                       </IconButton>
                     </Avatar>
                   </AccordionActions>

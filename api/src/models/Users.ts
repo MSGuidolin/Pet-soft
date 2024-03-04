@@ -42,6 +42,7 @@ const UserSchema = new Schema<IUser>(
 
       enum: ['Male', 'Female', 'Unkwown'],
       default: 'Unkwown',
+      required: true,
 
     },
     email: {

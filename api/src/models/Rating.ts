@@ -11,7 +11,6 @@ const RatingSchema = new Schema(
     },
     comments: {
       type: String,
-      required: true,
       trim: true,
     },
     provider: {

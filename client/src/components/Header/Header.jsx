@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
-import loto from '../../img/loto.png';
+import logo from '../../img/logo.png';
 import { BiShoppingBag } from 'react-icons/bi';
 import { useSelector, useDispatch } from 'react-redux';
 import Menu from '@material-ui/core/Menu';
@@ -292,7 +292,7 @@ export default function PrimarySearchAppBar() {
           <Typography className={classes.title} variant='h6' noWrap>
             <Link to={'/'} style={{ textDecoration: 'none' }}>
               <img
-                src={loto}
+                src={logo}
                 alt='logo not found'
                 style={{
                   width: '4rem',

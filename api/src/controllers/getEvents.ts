@@ -107,12 +107,12 @@ export const getEventsByRole: RequestHandler = async (req, res) => {
         hour: event.hour,
         date: event.date,
         address: {
-          street: event.address.street,
-          number: event.address.number,
+          direction: event.address.direction,
+          address_details: event.address.address_details,
           city: event.address.city,
           state: event.address.state,
           country: event.address.country,
-          zip_code: event.address.zip_code,
+          postal_code: event.address.postal_code,
         },
         pet: {
           name: event.pet.name,

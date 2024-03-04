@@ -96,14 +96,14 @@ function Form({ showModal, setShowModal, change }) {
                 <label>Sexo</label>
                 <br></br>
                 <input type="radio" id="male" name="sex" value="Macho"/>
-                  <label for="male">Macho          </label>
+                  <label for="male">Macho</label>
                 <input type="radio" id="female" name="sex" value="Hembra"/>
                   <label for="female">Hembra</label>
               </div>
 
               <div className="form-element-1">
                 <label>Foto</label>
-                <input value={image} type="file" name="file" id="file"></input>
+                <input value={image} type="file" name="file" id="file" required></input>
                 <label for="file" className="file"></label>
               </div>
               <div className="center-modal-test">

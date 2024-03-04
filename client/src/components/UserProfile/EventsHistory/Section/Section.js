@@ -26,6 +26,15 @@ function Section() {
   let reservations = [];
   if (data && data.length) {
     reservations = data;
+  } else {
+    return (
+      <div>
+        <h3>
+        No se han registrado compras aún
+        </h3>
+      </div>
+      
+    )
   }
 
   return (

@@ -15,7 +15,7 @@ import { getServices } from '../../../Redux/actions/actions';
 import CheckBoxComponent from '../CheckBox/CheckBoxComponent';
 import MaterialUIPickers from '../SelectHour/SelectorHour';
 import MultipleSelect from '../AddPayMethod/addPayMethod';
-import FormAdresses from '../FormAdresses/FormAdress';
+import FormAddresses from '../FormAddresses/FormAddress';
 import DialogFinalRegister from '../DialogFinalRegister/DialogFinalRegister';
 
 const useStyles = makeStyles((theme) => ({
@@ -42,7 +42,7 @@ function getSteps() {
   ];
 }
 
-function getStepContent(step, services, adresses) {
+function getStepContent(step, services, addresses) {
   switch (step) {
     case 0:
       return (
@@ -62,7 +62,7 @@ function getStepContent(step, services, adresses) {
     case 2:
       return (
         <>
-          <FormAdresses type='addresses' data={adresses} />
+          <FormAddresses type='addresses' data={addresses} />
         </>
       );
 

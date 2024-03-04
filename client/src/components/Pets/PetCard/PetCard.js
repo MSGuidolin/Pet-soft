@@ -39,7 +39,7 @@ function PetCard({ image, name, animal, race, age, sex, userID, refreshPets }) {
         await axios.delete(`http://localhost:3002/pets/${userID}/${name}`);
         refreshPets()
         toast.success(
-            `${name} ha sido removido de tus mascotas.`,
+            `${name} ha sido eliminado de tus mascotas.`,
             {
               position: toast.POSITION.TOP_CENTER,
             }

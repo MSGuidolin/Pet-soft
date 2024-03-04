@@ -41,9 +41,9 @@ function ProviderProfileUpdate({ classes, provider }) {
 
   const [address, setAddress] = useState({
     name: '',
-    address_1: '',
+    direction: '',
     address_details: '',
-    zip_code: '',
+    postal_code: '',
     country: '',
     state: '',
     city: '',
@@ -204,7 +204,7 @@ function ProviderProfileUpdate({ classes, provider }) {
             <Divider variant='inset' />
 
             <Grid item container direction='row' spacing={2}>
-              <Grid item xs={12} sm={3}>
+              {/* <Grid item xs={12} sm={3}>
                 <TextField
                   id='address_input'
                   value={address.name}
@@ -220,22 +220,22 @@ function ProviderProfileUpdate({ classes, provider }) {
                   error={errors.name ? true : false}
                   helperText={errors.name}
                 />
-              </Grid>
+              </Grid> */}
               <Grid item xs={12} sm={3}>
                 <TextField
-                  value={address.address_1}
+                  value={address.direction}
                   id='address_input'
-                  name='address_1'
+                  name='direction'
                   label='Dirección'
                   type='text'
-                  autoComplete='current-address_1'
+                  autoComplete='current-direction'
                   variant='outlined'
                   fullWidth
                   size='small'
                   onChange={(e) => handleChange(e)}
                   required
-                  error={errors.address_1 ? true : false}
-                  helperText={errors.address_1}
+                  error={errors.direction ? true : false}
+                  helperText={errors.direction}
                 />
               </Grid>
               <Grid item xs={12} sm={3}>
@@ -243,7 +243,7 @@ function ProviderProfileUpdate({ classes, provider }) {
                   value={address.address_details}
                   id='address_input'
                   name='address_details'
-                  label='Piso/Dpto'
+                  label='Detalles'
                   type='text'
                   autoComplete='current-address_details'
                   variant='outlined'
@@ -254,19 +254,19 @@ function ProviderProfileUpdate({ classes, provider }) {
               </Grid>
               <Grid item xs={12} sm={3}>
                 <TextField
-                  value={address.zip_code}
+                  value={address.postal_code}
                   id='address_input'
-                  name='zip_code'
+                  name='postal_code'
                   label='Código Postal'
                   type='number'
-                  autoComplete='current-zip_code'
+                  autoComplete='current-postal_code'
                   variant='outlined'
                   fullWidth
                   size='small'
                   onChange={(e) => handleChange(e)}
                   required
-                  error={errors.zip_code ? true : false}
-                  helperText={errors.zip_code}
+                  error={errors.postal_code ? true : false}
+                  helperText={errors.postal_code}
                 />
               </Grid>
             </Grid>

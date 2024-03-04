@@ -10,7 +10,7 @@ import {
   Avatar,
   IconButton,
 } from '@material-ui/core';
-import FormAdresses from '../../HomeProviders/FormAdresses/FormAdress';
+import FormAddresses from '../../HomeProviders/FormAddresses/FormAddress';
 import image_profileII from '../../../img/image_profileII.jpg';
 
 function ProviderProfileData({ provider, classes, data }) {
@@ -42,7 +42,7 @@ function ProviderProfileData({ provider, classes, data }) {
             <Grid item className={classes.dataItems}>
               <Avatar className={classes.icon}>
                 <IconButton>
-                  <FormAdresses type='profile' data={provider} />
+                  <FormAddresses type='profile' data={provider} />
                 </IconButton>
               </Avatar>
             </Grid>
@@ -67,7 +67,7 @@ function ProviderProfileData({ provider, classes, data }) {
                 justifyContent='space-between'
                 className={classes.dataItems}
               >
-                <Typography variant='h7'>email</Typography>
+                <Typography variant='h7'>Email</Typography>
                 <Typography variant='h7'>{provider?.email}</Typography>
               </Grid>
               <Grid
@@ -76,7 +76,7 @@ function ProviderProfileData({ provider, classes, data }) {
                 justifyContent='space-between'
                 className={classes.dataItems}
               >
-                <Typography variant='h7'>teléfono</Typography>
+                <Typography variant='h7'>Teléfono</Typography>
                 <Typography variant='h7'>{provider?.phone}</Typography>
               </Grid>
 
@@ -107,17 +107,8 @@ function ProviderProfileData({ provider, classes, data }) {
                             justifyContent='space-between'
                             className={classes.dirItems}
                           >
-                            <Typography variant='h7'>Tipo</Typography>
-                            <Typography variant='h7'>{a.name}</Typography>
-                          </Grid>
-                          <Grid
-                            item
-                            container
-                            justifyContent='space-between'
-                            className={classes.dirItems}
-                          >
                             <Typography variant='h7'>Dirección</Typography>
-                            <Typography variant='h7'>{a.address_1}</Typography>
+                            <Typography variant='h7'>{a.direction}</Typography>
                           </Grid>
                           <Grid
                             item
@@ -125,14 +116,14 @@ function ProviderProfileData({ provider, classes, data }) {
                             justifyContent='space-between'
                             className={classes.dirItems}
                           >
-                            <Typography variant='h7'>Piso/Dpto</Typography>
+                            <Typography variant='h7'>Detalles</Typography>
                             {a.address_details ? (
                               <Typography variant='h7'>
                                 {a.address_details}
                               </Typography>
                             ) : (
                               <Typography variant='subtitle1'>
-                                no definido
+                                No definido
                               </Typography>
                             )}
                           </Grid>
@@ -149,7 +140,7 @@ function ProviderProfileData({ provider, classes, data }) {
                       );
                     })
                 ) : (
-                  <p>completa el formulario...</p>
+                  <p>Completa el formulario...</p>
                 )}
               </Grid>
             </Grid>

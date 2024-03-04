@@ -229,11 +229,11 @@ export const addHoursJobToProvider = (hours) => async () => {
   }
 };
 
-export const addAdressesToProvider = (adresses) => async () => {
+export const addAddressesToProvider = (addresses) => async () => {
   try {
     await axios.post(
-      `${GET_PROVIDERS}/${adresses.provider}/addresses`,
-      adresses
+      `${GET_PROVIDERS}/${addresses.provider}/addresses`,
+      addresses
     );
   } catch (error) {
     console.log(error);
