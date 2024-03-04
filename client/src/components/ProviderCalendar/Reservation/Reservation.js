@@ -128,36 +128,36 @@ export default function Reservation({ handleActive, date, hour, provider, servic
         };
     }, [pets])
 
-const handleChange = (e) => {
-    setData({
-        ...data,
-        address: e.target.innerText
-    })
-    setAnchorEl(null);
-}
+    const handleChange = (e) => {
+        setData({
+            ...data,
+            address: e.target.innerText
+        })
+        setAnchorEl(null);
+    }
 
-const handleChange2 = (e) => {
-    setData({
-        ...data,
-        pet: e.target.innerText
-    })
-    setAnchorEl3(null);
-}
+    const handleChange2 = (e) => {
+        setData({
+            ...data,
+            pet: e.target.innerText
+        })
+        setAnchorEl3(null);
+    }
 
-const handleAdd = (e) => {
-    setAnchorEl2(false);
-    setAddModal(true);
-}
+    const handleAdd = (e) => {
+        setAnchorEl2(false);
+        setAddModal(true);
+    }
 
-const handleAdd2 = (e) => {
-    setAnchorEl4(false);
-    setAddModal2(true);
-}
+    const handleAdd2 = (e) => {
+        setAnchorEl4(false);
+        setAddModal2(true);
+    }
 
-const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
-const handleAccept = async () => {
-        if(data.pet !== '') {
+    const handleAccept = async () => {
+        if (data.pet !== '') {
             handleClickModal()
             dispatch(reservationStatus(data));
             handleActive()
@@ -166,92 +166,92 @@ const handleAccept = async () => {
                 position: toast.POSITION.TOP_CENTER
             })
         }
-}
+    }
 
-return (
-    <div className='modal'>
-        <div className='modal-content'>
-            <h2>Reservación</h2>
-            <div className='modal-detail'>
-                <h3>Detalle del turno</h3>
+    return (
+        <div className='modal'>
+            <div className='modal-content'>
+                <h2>Reservación</h2>
+                <div className='modal-detail'>
+                    <h3>Detalle del turno</h3>
 
-                <tbody>
-                    <tr>
-                        <td>Proveedor</td>
-                        <td>{provider}</td>
-                    </tr>
-                    <tr>
-                        <td>Fecha</td>
-                        <td>{date}</td>
-                    </tr>
-                    <tr>
-                        <td>Hora</td>
-                        <td>{`${hour}:00hs`}</td>
-                    </tr>
-                    <tr>
-                        <td>Servicio</td>
-                        <td>{service}</td>
-                    </tr>
-                    <tr>
-                        <td>Precio</td>
-                        <td>{`$${price}`}</td>
-                    </tr>
-                    <tr>
-                        <td>Mascota</td>
-                        <td className='td-address'>
-                            <span>
-                                {pets && pets.length ? data.pet : 'Ninguna'}
-                            </span>
-                            <span>
-                                <Button aria-controls="pet-menu" aria-haspopup="true" onClick={handleClick3}>
-                                    <PetsIcon className='modal-icon' />
-                                </Button>
-                                <Menu
-                                    id="pet-menu"
-                                    anchorEl={anchorEl3}
-                                    keepMounted
-                                    open={open3}
-                                    onClose={handleClose3}
-                                    TransitionComponent={Fade}
-                                >
-                                    {
-                                        pets && pets.length && pets.map((el, index) => (
-                                            <MenuItem onClick={(e) => handleChange2(e)} key={index} value={el.name}>{el.name}</MenuItem>
-                                        ))
-                                    }
-                                </Menu>
-                                <Button aria-controls="pet-add-menu" aria-haspopup="true" onClick={handleClick4}>
-                                    <AddIcon className='modal-icon' />
-                                </Button>
-                                <Menu
-                                    id="pet-add-menu"
-                                    anchorEl={anchorEl4}
-                                    keepMounted
-                                    open={open4}
-                                    onClose={handleClose4}
-                                    TransitionComponent={Fade}
-                                >
-                                    <MenuItem onClick={() => handleAdd2()}>Añadir Mascota</MenuItem>
-                                </Menu>
-                            </span>
-                            <FormImage showModal={addModal2} setShowModal={setAddModal2} setChange={() => setChange2(!change)} />
-                        </td>
-                    </tr>
-                </tbody>
-                <p>IMPORTANTE*</p>
-                <p>El turno se añadirá a la bolsa de pago, pero estará disponible para otros usuarios hasta que se complete el pago del mismo.*</p>
-                <br/>
-            
+                    <tbody>
+                        <tr>
+                            <td>Proveedor</td>
+                            <td>{provider}</td>
+                        </tr>
+                        <tr>
+                            <td>Fecha</td>
+                            <td>{date}</td>
+                        </tr>
+                        <tr>
+                            <td>Hora</td>
+                            <td>{`${hour}:00hs`}</td>
+                        </tr>
+                        <tr>
+                            <td>Servicio</td>
+                            <td>{service}</td>
+                        </tr>
+                        <tr>
+                            <td>Precio</td>
+                            <td>{`$${price}`}</td>
+                        </tr>
+                        <tr>
+                            <td>Mascota</td>
+                            <td className='td-address'>
+                                <span>
+                                    {pets && pets.length ? data.pet : 'Ninguna'}
+                                </span>
+                                <span>
+                                    <Button aria-controls="pet-menu" aria-haspopup="true" onClick={handleClick3}>
+                                        <PetsIcon className='modal-icon' />
+                                    </Button>
+                                    <Menu
+                                        id="pet-menu"
+                                        anchorEl={anchorEl3}
+                                        keepMounted
+                                        open={open3}
+                                        onClose={handleClose3}
+                                        TransitionComponent={Fade}
+                                    >
+                                        {
+                                            pets && pets.length && pets.map((el, index) => (
+                                                <MenuItem onClick={(e) => handleChange2(e)} key={index} value={el.name}>{el.name}</MenuItem>
+                                            ))
+                                        }
+                                    </Menu>
+                                    <Button aria-controls="pet-add-menu" aria-haspopup="true" onClick={handleClick4}>
+                                        <AddIcon className='modal-icon' />
+                                    </Button>
+                                    <Menu
+                                        id="pet-add-menu"
+                                        anchorEl={anchorEl4}
+                                        keepMounted
+                                        open={open4}
+                                        onClose={handleClose4}
+                                        TransitionComponent={Fade}
+                                    >
+                                        <MenuItem onClick={() => handleAdd2()}>Añadir Mascota</MenuItem>
+                                    </Menu>
+                                </span>
+                                <FormImage showModal={addModal2} setShowModal={setAddModal2} setChange={() => setChange2(!change)} />
+                            </td>
+                        </tr>
+                    </tbody>
+                    <p>IMPORTANTE*</p>
+                    <p>El turno se añadirá a la bolsa de pago, pero estará disponible para otros usuarios hasta que se complete el pago del mismo.*</p>
+                    <br />
+
+                </div>
+                <button
+                    className='modal-button left'
+                    onClick={() => handleActive()}
+                >CANCELAR</button>
+                <button
+                    className='modal-button right'
+                    onClick={handleAccept}
+                >ACEPTAR</button>
             </div>
-            <button
-                className='modal-button left'
-                onClick={() => handleActive()}
-            >CANCELAR</button>
-            <button
-                className='modal-button right'
-                onClick={handleAccept}
-            >ACEPTAR</button>
-        </div>
-    </div >
-);
+        </div >
+    );
 }

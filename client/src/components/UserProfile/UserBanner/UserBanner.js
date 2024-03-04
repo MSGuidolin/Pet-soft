@@ -112,7 +112,7 @@ function UserBanner() {
   }, []);
 
   useEffect(() => {
-    if(userID !== ""){
+    if (userID !== "") {
       dispatch(getUserProfile(userID));
     }
   }, [userID]);

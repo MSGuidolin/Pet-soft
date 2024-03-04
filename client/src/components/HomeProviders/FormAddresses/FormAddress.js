@@ -318,7 +318,7 @@ export default function FormAddresses({ type, alldata, data }) {
                 </DialogContentText>
               </DialogContentText>
 
-              {type != "profile" && 
+              {type != "profile" &&
                 <TextField
                   autoFocus
                   margin="dense"
@@ -351,7 +351,7 @@ export default function FormAddresses({ type, alldata, data }) {
                       : ""
                 }
               />
-              {type != "profile" && 
+              {type != "profile" &&
                 <TextField
                   id="standard-select-currency"
                   select
@@ -387,7 +387,7 @@ export default function FormAddresses({ type, alldata, data }) {
               />
               <TextField
                 margin="dense"
-                label={ type === "profile" ? "Información" : "Detalles"}
+                label={type === "profile" ? "Información" : "Detalles"}
                 type="text"
                 fullWidth
                 name={type === "profile" ? "bio" : "address_details"}
@@ -402,7 +402,7 @@ export default function FormAddresses({ type, alldata, data }) {
                       : ""
                 }
               />
-              {type != "profile" && 
+              {type != "profile" &&
                 <TextField
                   margin="dense"
                   label="Código Postal"

@@ -23,7 +23,7 @@ function ProviderProfileData({ provider, classes, data }) {
           <img
             className={classes.profileImg}
             src={"https://cdn.dribbble.com/users/5180766/screenshots/15347456/petshop_4x.jpg"}
-            // src={image_profileII}
+          // src={image_profileII}
           />
         </Box>
         <Divider className={classes.divider} />

@@ -12,7 +12,7 @@ export interface IUser extends Document {
   roles: any[];
   event: any[];
   rating: any[];
-  confirm:any;
+  confirm: any;
   setImage(filename: any): void;
   comparePassword(password: string): Promise<boolean>;
 }
@@ -24,8 +24,8 @@ const UserSchema = new Schema<IUser>(
     },
     img:
     {
-        data: Buffer,
-        contentType: String
+      data: Buffer,
+      contentType: String
     },
     firstName: {
       type: String,
@@ -55,10 +55,10 @@ const UserSchema = new Schema<IUser>(
       trim: true,
       default: 1234,
     },
-    confirm:{
-      type: Boolean, 
+    confirm: {
+      type: Boolean,
       default: false,
-        },
+    },
     password: {
       type: String,
       trim: true,

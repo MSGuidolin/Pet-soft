@@ -30,12 +30,13 @@
 }
 
 
-.trash-icon, .edit-icon{
-margin: 0 5px;
+.trash-icon,
+.edit-icon {
+  margin: 0 5px;
 }
 
-.trash-icon{
-    color: red;
+.trash-icon {
+  color: red;
 }
 
 .isMain {

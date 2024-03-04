@@ -66,8 +66,8 @@ function Cart(props) {
     return (
         <div className='container-main'>
             <div className='container'>
-            <br/>
-            <h1 className='title'>Bolsa de compras</h1>
+                <br />
+                <h1 className='title'>Bolsa de compras</h1>
                 {
                     loading ? (<div>Loading...</div>) :
                         error ? (<div>{error}</div>) :

@@ -185,17 +185,17 @@ export default function PrimarySearchAppBar() {
       </Button>
     </Link>,
     <Link
-    to={'/provRegister'}
-    style={{
-      color: '#311b92',
-      textDecoration: 'none',
-      font: '16px',
-    }}
-  >
-    <Button style={{ fontSize: '16px', fontWeight: 'bold' }} color='inherit'>
-      REGISTRAR PROVEEDOR{' '}
-    </Button>
-  </Link>,
+      to={'/provRegister'}
+      style={{
+        color: '#311b92',
+        textDecoration: 'none',
+        font: '16px',
+      }}
+    >
+      <Button style={{ fontSize: '16px', fontWeight: 'bold' }} color='inherit'>
+        REGISTRAR PROVEEDOR{' '}
+      </Button>
+    </Link>,
   ];
 
   let loggedProvider = [
@@ -219,9 +219,9 @@ export default function PrimarySearchAppBar() {
         to={'/user/provider'}
         style={{ color: 'rgb(121, 47, 111)', textDecoration: 'none' }}
       >
-      <MenuItem /* onClick={handleClose} */ onClick={(e) => handleRedirect(e)}>
-        Perfil
-      </MenuItem>
+        <MenuItem /* onClick={handleClose} */ onClick={(e) => handleRedirect(e)}>
+          Perfil
+        </MenuItem>
       </Link>
       <MenuItem onClick={handleClose}>Mis Servicios</MenuItem>
       <MenuItem onClick={handleCloseLogin}>Cerrar Sesión</MenuItem>
@@ -249,8 +249,8 @@ export default function PrimarySearchAppBar() {
             <Link
               to={`/profile`}
               style={{ color: 'rgb(121, 47, 111)', textDecoration: 'none' }}
-            >            
-            <MenuItem onClick={(e) => handleRedirect(e)}>Perfil</MenuItem>
+            >
+              <MenuItem onClick={(e) => handleRedirect(e)}>Perfil</MenuItem>
             </Link>
             <Link
               to={`/pets`}

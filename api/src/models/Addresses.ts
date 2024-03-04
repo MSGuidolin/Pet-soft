@@ -10,7 +10,7 @@ const AddressSchema = new Schema(
     address_details: {
       type: String,
       trim: true,
-    },    
+    },
     city: {
       type: String,
       required: true,
@@ -30,6 +30,10 @@ const AddressSchema = new Schema(
       type: String,
       required: true,
       trim: true,
+    },
+    is_main: {
+      type: Boolean,
+      default: false,
     },
     provider: {
       type: Schema.Types.ObjectId,

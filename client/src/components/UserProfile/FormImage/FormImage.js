@@ -12,7 +12,7 @@ function Form({ showModal, setShowModal }) {
     lastName: false,
     phone: false,
   });
-  
+
   const [image, setImage] = useState();
 
   const [input, setInput] = useState({
@@ -85,7 +85,7 @@ function Form({ showModal, setShowModal }) {
                 <label for="file" className="file"></label>
               </div>
               <div className="center-modal-test">
-                  <button type="submit" className="button" onClick={handleUpload}>ACTUALIZAR</button>
+                <button type="submit" className="button" onClick={handleUpload}>ACTUALIZAR</button>
               </div>
             </form>
           </div>

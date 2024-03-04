@@ -3,3 +3,4 @@ node_modules
 .gitignore
 .env
 api/src/routes/uploads/
+.vscode
