@@ -214,7 +214,7 @@ const HomeProvider = () => {
           </div>) : null}
         {users.services.length < 1 ? (
           <div className='addressDiv'>
-            <VerticalLinearStepper  data={addresses} providerID={provider?._id} />
+            <VerticalLinearStepper data={addresses} providerID={provider?._id} />
           </div>
         ) : null
         }

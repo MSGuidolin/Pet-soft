@@ -16,6 +16,7 @@ import image_profileII from '../../../img/image_profileII.jpg';
 function ProviderProfileData({ provider, classes, data }) {
 
   console.log(provider)
+  console.log(data)
   return (
     <Grid item className={classes.gridProfile}>
       <Paper className={classes.paper} elevation={3}>
@@ -79,7 +80,15 @@ function ProviderProfileData({ provider, classes, data }) {
                 <Typography variant='h7'>Teléfono</Typography>
                 <Typography variant='h7'>{provider?.phone}</Typography>
               </Grid>
-
+              <Grid
+                item
+                container
+                justifyContent='space-between'
+                className={classes.dataItems}
+              >
+                <Typography variant='h7'><b>Sobre nosotros:</b></Typography>
+                <Typography variant='h7'>{provider?.bio}</Typography>
+              </Grid>
               <Grid
                 item
                 container

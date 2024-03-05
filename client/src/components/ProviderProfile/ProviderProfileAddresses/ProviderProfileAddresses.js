@@ -47,23 +47,20 @@ function ProviderProfileAddresses({ provider, classes, data }) {
                     <>
                       <Accordion>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                          <Typography variant='h6'>{a.name} 🏠</Typography>
+                          <Typography variant='h6'>🏠 Dirección</Typography>
                         </AccordionSummary>
                         <hr />
                         <AccordionDetails>
                           <Typography variant='h7'>{a.direction}</Typography>
                         </AccordionDetails>
-                        <AccordionDetails>
-                          {a.address_details ? (
+                        {a.address_details && (
+                          <AccordionDetails>
                             <Typography variant='h7'>
                               {a.address_details}
                             </Typography>
-                          ) : (
-                            <Typography variant='subtitle1'>
-                              Detalles no definidos
-                            </Typography>
-                          )}
-                        </AccordionDetails>
+                            </AccordionDetails>
+                            )
+                          }
                         <AccordionDetails>
                           <Typography variant='h7'>{a.city}</Typography>
                         </AccordionDetails>
@@ -71,7 +68,7 @@ function ProviderProfileAddresses({ provider, classes, data }) {
                         <AccordionActions>
                           <Avatar className={classes.icon}>
                             <IconButton>
-                              <FormAddresses type='addresses' data={data} />
+                              <FormAddresses type='addresses' data={a} />
                             </IconButton>
                           </Avatar>
                         </AccordionActions>

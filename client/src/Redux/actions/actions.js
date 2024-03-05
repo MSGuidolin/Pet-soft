@@ -116,6 +116,7 @@ export const getProvidersbyServiceName = (serviceName) => async (dispatch) => {
 
 export const updateProvider =
   (providerId, providerData) => async (dispatch) => {
+    console.log(providerData);
     try {
       const { data } = await axios.put(
         `${GET_PROVIDERS}/${providerId}`,

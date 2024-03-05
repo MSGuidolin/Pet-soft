@@ -21,6 +21,7 @@ import { red, green, orange } from "@material-ui/core/colors";
 
 import {
   addAddressesToProvider,
+  updateProviderAddress,
   getProviderDetails,
   updateProfileProvider,
 } from "../../../Redux/actions/actions";
@@ -150,6 +151,7 @@ export default function FormAddresses({ type, alldata, data }) {
     state = initialAddresses;
   }
   const [dataAddress, setDataAddress] = useState({
+    ...data,
     provider: provider.providerFound._id
   });
 
@@ -175,15 +177,19 @@ export default function FormAddresses({ type, alldata, data }) {
   const handleChange = (e) => {
     setDataAddress({
       ...dataAddress,
-      [e.target.name]: e.target.value.toLowerCase(),
-      name: e.target.value
+      [e.target.name]: e.target.value,
+      // name: e.target.value
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (type !== "profile") {
-      dispatch(addAddressesToProvider(dataAddress));
+      if (!dataAddress._id) {
+        dispatch(addAddressesToProvider(dataAddress));
+      } else {
+        dispatch(updateProviderAddress(dataAddress.provider, dataAddress._id, dataAddress));
+      }
       setDataAddress({});
       setOpen(false);
       toast.success(
@@ -330,8 +336,8 @@ export default function FormAddresses({ type, alldata, data }) {
                   defaultValue={
                     type === "profile"
                       ? data?.firstName
-                      : type === "addresses" && Array.isArray(data)
-                        ? data[0]?.country
+                      : type === "addresses"
+                        ? data?.country
                         : ""
                   }
                 />
@@ -347,21 +353,25 @@ export default function FormAddresses({ type, alldata, data }) {
                   type === "profile"
                     ? data?.lastName
                     : type === "addresses"
-                      ? data && data[0]?.state
+                      ? data && data?.state
                       : ""
                 }
               />
               {type != "profile" &&
                 <TextField
+                  margin="dense"
+                  fullWidth
+                  name="city"
                   id="standard-select-currency"
                   select
                   label="Departamento"
                   defaultValue="Capital"
                   // helperText="Elige tu departamento"
                   variant="standard"
+                  onChange={handleChange}
                 >
                   {Departamentos.map((option) => (
-                    <MenuItem key={option.value} value={option.value}>
+                    <MenuItem key={option.value} value={option.value} selected={option.value === data.city}>
                       {option.label}
                     </MenuItem>
                   ))}
@@ -379,10 +389,8 @@ export default function FormAddresses({ type, alldata, data }) {
                   type === "profile"
                     ? data?.phone
                     : type === "addresses"
-                      ? data?.length
-                        ? data[0].direction
+                        ? data.direction
                         : ""
-                      : ""
                 }
               />
               <TextField
@@ -396,28 +404,24 @@ export default function FormAddresses({ type, alldata, data }) {
                   type === "profile"
                     ? data?.bio
                     : type === "addresses"
-                      ? data?.length
-                        ? data[0].address_details
+                        ? data.address_details
                         : "  "
-                      : ""
                 }
               />
               {type != "profile" &&
                 <TextField
+                  name="postal_code"
                   margin="dense"
                   label="Código Postal"
                   type="text"
                   fullWidth
-                  name="postal_code"
                   onChange={handleChange}
                   defaultValue={
                     type === "profile"
                       ? data?.age
                       : type === "addresses"
-                        ? data?.length
-                          ? data[0].postal_code
+                          ? data.postal_code
                           : ""
-                        : ""
                   }
                 />
               }
