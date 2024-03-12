@@ -23,8 +23,8 @@ import AboutPetSoft from "../components/About/AboutPetSoft.js";
 import AboutUs from "../components/About/AboutUs";
 import CompletePerfil from '../components/CompletePerfil/CompletePerfil';
 
-import ConfirmationMail from "../components/ConfirmationMail/ConfirmationMail";
-import ConfirmationMailProvider from "../components/ConfirmationMail/ConfirmationMailProvider";
+// import ConfirmationMail from "../components/ConfirmationMail/ConfirmationMail";
+// import ConfirmationMailProvider from "../components/ConfirmationMail/ConfirmationMailProvider";
 
 import EventsHistory from "../components/UserProfile/EventsHistory/EventsHistory";
 import Pets from "../components/Pets/Pets";
@@ -62,12 +62,12 @@ const App = () => {
       {/* <Route exact path="/covid" component={CovidProtocol} /> */}
       <Route exact path="/profile/historial" component={EventsHistory} />
       <Route exact path="/pets" component={Pets} />
-      <Route exact path="/confirmation/user/:id" component={ConfirmationMail} />
+      {/* <Route exact path="/confirmation/user/:id" component={ConfirmationMail} />
       <Route
         exact
         path="/confirmation/provider/:id"
         component={ConfirmationMailProvider}
-      />
+      /> */}
       <Route exact path="/about-PetSoft" component={AboutPetSoft} />
       <Route exact path="/about-Us" component={AboutUs} />
       <Route path="/" component={Footer} />
