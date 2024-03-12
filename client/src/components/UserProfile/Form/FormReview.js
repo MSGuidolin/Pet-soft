@@ -47,6 +47,7 @@ function FormReview({ showModal, setShowModal, eventId, setChange, ind }) {
       position: toast.POSITION.TOP_CENTER
     })
     setShowModal()
+    window.location.reload(true);
   };
 
   const handleInputChange = function (e) {

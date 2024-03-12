@@ -81,6 +81,7 @@ export default function MaterialUIPickers({ type }) {
         position: toast.POSITION.TOP_CENTER
       })
     }
+    window.location.reload(true);
   };
 
   //remove hour not desire

@@ -89,7 +89,7 @@ function ProviderProfileData({ provider, classes, data }) {
                 <Typography variant='h7'><b>Sobre nosotros:</b></Typography>
                 <Typography variant='h7'>{provider?.bio}</Typography>
               </Grid>
-              <Grid
+              {/* <Grid
                 item
                 container
                 direction='row'
@@ -98,7 +98,7 @@ function ProviderProfileData({ provider, classes, data }) {
                 <Typography variant='body1' className={classes.dataSubtitle}>
                   Direcciones{' '}
                 </Typography>
-              </Grid>
+              </Grid> */}
               <Grid
                 item
                 container

@@ -211,6 +211,8 @@ export default function FormAddresses({ type, alldata, data }) {
         JSON.stringify({ providerFound: actualProvider })
       );
     }
+    window.location.reload(true);
+
   };
 
   return (

@@ -65,6 +65,8 @@ function FormEditAddresses({ editAddressModal, setEditAddressModal, addressId, d
         })
       }
     }
+    window.location.reload(true);
+
   };
 
   const handleInputChange = function (e) {
