@@ -155,12 +155,12 @@ export default function SignIn() {
               position: toast.POSITION.TOP_CENTER,
             }
           );
-          toast.warning(
-            `Asegurate de haber confirmado tu cuenta, revisa tu casilla de e-mail`,
-            {
-              position: toast.POSITION.TOP_CENTER,
-            }
-          );
+          // toast.warning(
+          //   `Asegurate de haber confirmado tu cuenta, revisa tu casilla de e-mail`,
+          //   {
+          //     position: toast.POSITION.TOP_CENTER,
+          //   }
+          // );
         }
       });
     }

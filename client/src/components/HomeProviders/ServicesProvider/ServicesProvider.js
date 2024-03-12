@@ -51,7 +51,7 @@ function ServicesProvider({ provider, classes, data, alldata, type }) {
                         </>
                       ) : (
                         <>
-                          <AccessTimeIcon color='secondary' /> {service}:00 hrs`
+                          <AccessTimeIcon color='secondary' /> {service}:00 hrs
                         </>
                       )}
                     </>

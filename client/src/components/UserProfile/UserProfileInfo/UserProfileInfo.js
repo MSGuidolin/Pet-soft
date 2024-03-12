@@ -45,7 +45,7 @@ function UserProfileInfo() {
           </div>
           <p className="p">Nombre: {userData && userData.firstName}</p>
           <p className="p">Apellido: {userData && userData.lastName}</p>
-          <p className="p">Correo Electronico: {userData && userData.email}</p>
+          <p className="p">Correo Electrónico: {userData && userData.email}</p>
           <p className="p">Telefono: {userData && userData.phone}</p>
         </div>
         <br></br>

@@ -62,6 +62,7 @@ function Form({ showModal, setShowModal }) {
     } catch (error) {
       console.log(error);
     }
+    window.location.reload(true);
   };
 
 

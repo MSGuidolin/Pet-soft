@@ -117,7 +117,7 @@ export const signUp: RequestHandler = async (req, res) => {
       sendCofirmationEmail(savedProvider);
       return res.status(201).send({
         data: savedProvider,
-        message: `Felicitaciones, ${newProvider.firstName}! Ya eres parte del equipo de Estetic-Aap.`,
+        message: `Felicitaciones, ${newProvider.firstName}! Ya eres parte del equipo de PetSoft.`,
       });
     } catch (error: any) {
       res.status(501).send({

@@ -223,12 +223,12 @@ export default function SignUp() {
           setUser(a.data);
           success(`register user ${a.data.email}`);
           history.push("/");
-          toast.success(`🎉 Felicidades, cuenta creada con exito`, {
+          toast.success(`🎉 Felicidades, cuenta creada con exito. Por favor ingresa.`, {
             position: toast.POSITION.TOP_CENTER,
           });
-          toast.warning(`🙌🏽 Debes verificar tu email antes de ingresar`, {
-            position: toast.POSITION.TOP_CENTER,
-          });
+          // toast.warning(`🙌🏽 Debes verificar tu email antes de ingresar`, {
+          //   position: toast.POSITION.TOP_CENTER,
+          // });
         })
         .catch((error) => {
           console.log(error);
