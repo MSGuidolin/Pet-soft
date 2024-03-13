@@ -54,7 +54,7 @@ function getStepContent(step, services, addresses) {
       return (
         <>
           {
-            "Debes seleccionar una hora fija (7:00, 10:00) y darle 'ok'. Para ingresar una nueva hora vuelve a seleccionar el calendario y elije. 💥  UNICAMENTE 💥 cuando hayas terminado de ingresar todas las horas podrás dar 'Click' en 'Confirmar'"
+            "Debes seleccionar una hora (7:00, 10:00) y darle 'ok'. Para ingresar una nueva hora vuelve a seleccionar el calendario y elije. 💥  UNICAMENTE 💥 cuando hayas terminado de ingresar todas las horas podrás dar 'Click' en 'Confirmar'"
           }
           <MaterialUIPickers />
         </>

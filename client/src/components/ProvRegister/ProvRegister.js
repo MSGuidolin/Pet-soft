@@ -222,9 +222,9 @@ export default function SignUp() {
                     toast.success(`🎉 Felicidades, cuenta creada con exito. Por favor ingresa.`, {
                         position: toast.POSITION.TOP_CENTER,
                     });
-                    toast.warning(`🙌🏽 Debes verificar tu email antes de ingresar`, {
-                        position: toast.POSITION.TOP_CENTER,
-                    });
+                    // toast.warning(`🙌🏽 Debes verificar tu email antes de ingresar`, {
+                    //     position: toast.POSITION.TOP_CENTER,
+                    // });
                 })
                 .catch((error) => {
                     console.log(error);
@@ -302,12 +302,13 @@ export default function SignUp() {
                                     id="firstName"
                                     label="Tipo de local"
                                     error={!valid}
+                                    defaultValue={'Veterinaria'}
                                     helperText={!valid ? error.firstNameError : ""}
                                     {...firstName}
                                 // onChange={handleChange}
                                 >
-                                    <MenuItem value={'Veterinaria'}>Veterinaria</MenuItem>
-                                    <MenuItem value={'Pet Shop'}>Pet Shop</MenuItem>
+                                    <MenuItem value={'Veterinaria'} selected='true' >Veterinaria</MenuItem>
+                                    {/* <MenuItem value={'Pet Shop'}>Pet Shop</MenuItem> */}
                                 </Select>
                             </FormControl>
                         </Grid>

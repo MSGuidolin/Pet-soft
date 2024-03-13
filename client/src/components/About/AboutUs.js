@@ -22,7 +22,6 @@ const useStyles = makeStyles(() => ({
     left: "15%",
     color: "rgb(121, 47, 111)",
     padding: 10,
-    textShadow: '0 0 10px white, 0 0 10px white'
   },
   bannerSubtitle: {
     position: "absolute",
@@ -32,7 +31,6 @@ const useStyles = makeStyles(() => ({
     padding: 10,
     width: "40%",
     fontSize: "1.1rem",
-    textShadow: '0 0 10px white, 0 0 10px white'
   },
   containerText: {
     padding: 15,
@@ -49,6 +47,7 @@ const useStyles = makeStyles(() => ({
     margin: '20px auto'
   },
   containerTextItem: {
+    color: "hsl(308deg 44% 33%)",
     margin: '15px auto',
     width: "80%",
     textAlign: "center"
@@ -98,7 +97,7 @@ function AboutUs() {
                   Sobre nosotros
                 </Typography>
                 <Typography className={classes.bannerSubtitle}>
-                  <b>PetSoft</b> Es el resultado del esfuerzo de 5 estudiantes del instituto de educación superior CESIT y
+                  <b>PetSoft</b> es el resultado del esfuerzo de estudiantes del IES 9-023 y
                   fue realizado como proyecto de último año y con el objetivo de la graduación del mismo.
                   <br />
                 </Typography>

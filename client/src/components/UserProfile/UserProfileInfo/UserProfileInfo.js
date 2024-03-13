@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import defaultImg from "../../../img/wall-cart.jpg";
+import defaultImg from "../../../img/wall-cart.jpeg";
 import { BsFillPlusCircleFill, BsPencilSquare } from "react-icons/bs";
 import Form from "../Form/Form";
 import FormImage from "../FormImage/FormImage";

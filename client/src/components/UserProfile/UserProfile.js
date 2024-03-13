@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import defaultImg from '../../img/wall-cart.jpg';
+import defaultImg from '../../img/wall-cart.jpeg';
 import { getUserReservations } from '../../Redux/actions/user.actions';
 import UserProfileInfo from './UserProfileInfo/UserProfileInfo';
 import UserReservations from './UserReservations/UserReservations';

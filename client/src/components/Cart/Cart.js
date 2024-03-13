@@ -3,7 +3,7 @@ import { Container, Grid, Typography, Button, Paper } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CartItem from './CartItem/CartItem';
 import CartOrder from './CartOrder/CartOrder';
-import Image from '../../img/wall-cart.jpg';
+import Image from '../../img/wall-cart.jpeg';
 import axios from 'axios';
 import { HOST } from '../../utils/constants'
 import { getAllPrice, setPaginationViews } from '../../utils/pagination';

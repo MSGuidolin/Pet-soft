@@ -93,7 +93,7 @@ function AboutPetSoft() {
 
                     <Grid item container direction='column' alignItems='center' className={classes.containerText}>
                         <Grid item className={classes.containerTextItem}>
-                            <Typography variant='h5'>
+                            <Typography className={classes.title}>
                                 ¿Por qué PetSoft?
                             </Typography>
                             <Typography className={classes.subtitle}>

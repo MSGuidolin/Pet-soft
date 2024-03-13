@@ -193,7 +193,7 @@ export default function PrimarySearchAppBar() {
       }}
     >
       <Button style={{ fontSize: '16px', fontWeight: 'bold' }} color='inherit'>
-        REGISTRAR PROVEEDOR{' '}
+        REGISTRAR VETERINARIA{' '}
       </Button>
     </Link>,
   ];
@@ -220,10 +220,10 @@ export default function PrimarySearchAppBar() {
         style={{ color: 'rgb(121, 47, 111)', textDecoration: 'none' }}
       >
         <MenuItem /* onClick={handleClose} */ onClick={(e) => handleRedirect(e)}>
-          Perfil
+          Mi veterinaria
         </MenuItem>
       </Link>
-      <MenuItem onClick={handleClose}>Mis Servicios</MenuItem>
+      {/* <MenuItem onClick={handleClose}>Mis Servicios</MenuItem> */}
       <MenuItem onClick={handleCloseLogin}>Cerrar Sesión</MenuItem>
     </Menu>,
   ];

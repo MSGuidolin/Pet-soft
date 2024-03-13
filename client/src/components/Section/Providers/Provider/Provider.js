@@ -23,13 +23,13 @@ function Provider({ provider, service }) {
             ) : (
               <img
                 className="card-img"
-                src={"https://us.123rf.com/450wm/verpeya/verpeya1712/verpeya171200127/92112256-las-espadas-avatares-ilustraci%C3%B3n-vectorial-ilustraci%C3%B3n-vectorial-aislado-sobre-fondo-blanco-ilustrac.jpg?ver=6"}
+                src={"https://static.vecteezy.com/system/resources/previews/005/731/543/non_2x/illustration-of-the-logo-of-the-veterinary-clinic-vector.jpg"}
                 alt="Default Image"
               ></img>
             )}
             <div className="card-title">
               <h2 className="">{`${provider.firstName} ${provider.lastName}`}</h2>
-              <h4>{`Calificación: ${ratingProvider}⭐`}</h4>
+              {/* <h4>{`Calificación: ${ratingProvider}⭐`}</h4> */}
             </div>
           </div>
           <div className="card-options">
@@ -53,7 +53,7 @@ function Provider({ provider, service }) {
             >
               {provider.hasCalendar ? "Ver Agenda" : "Sin Agenda"}
             </NavLink>
-            <NavLink
+            {/* <NavLink
               className={
                 provider.rating?.length
                   ? "navLink card-button"
@@ -66,7 +66,7 @@ function Provider({ provider, service }) {
               }
             >
               {provider.rating?.length ? "Ver Reseñas" : "Sin Reseñas"}
-            </NavLink>
+            </NavLink> */}
           </div>
         </div>
       </NavLink>

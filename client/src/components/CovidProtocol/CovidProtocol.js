@@ -19,7 +19,6 @@ const useStyles = makeStyles(() => ({
         left: "5%",
         color: "rgb(121, 47, 111)",
         padding: 10,
-        textShadow: '0 0 10px white, 0 0 10px white'
     },
     bannerSubtitle: {
         position: "absolute",
@@ -29,7 +28,6 @@ const useStyles = makeStyles(() => ({
         padding: 10,
         width: "40%",
         fontSize: "1.1rem",
-        textShadow: '0 0 10px white, 0 0 10px white'
     },
     containerMain: {
         width: '90vw'

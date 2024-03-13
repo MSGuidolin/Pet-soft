@@ -23,7 +23,7 @@ function ProviderProfileData({ provider, classes, data }) {
         <Box className={classes.image}>
           <img
             className={classes.profileImg}
-            src={"https://cdn.dribbble.com/users/5180766/screenshots/15347456/petshop_4x.jpg"}
+            src={"https://static.vecteezy.com/system/resources/previews/005/731/543/non_2x/illustration-of-the-logo-of-the-veterinary-clinic-vector.jpg"}
           // src={image_profileII}
           />
         </Box>
@@ -50,7 +50,7 @@ function ProviderProfileData({ provider, classes, data }) {
 
             <Grid item container direction='row' className={classes.dataItems}>
               <Typography variant='body1' className={classes.dataSubtitle}>
-                Datos personales{' '}
+                Datos del local{' '}
               </Typography>
             </Grid>
 

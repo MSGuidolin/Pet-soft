@@ -49,7 +49,7 @@ const ProvidersSchema = new Schema<IProvider>(
     },
     confirm: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     bio: {
       type: String,
