@@ -118,6 +118,7 @@ export default function ProviderCalendar({ match }) {
                 loading ? (<div>cargando...</div>) :
                     error ? (<div>error...</div>) :
                         (<div className='container'>
+                            <br />
                             <h1 className='title'>{`Agenda de ${provider.lastName}`}</h1>
                             <div className=''>
                                 <div className='calendar-container'>
@@ -174,7 +175,7 @@ export default function ProviderCalendar({ match }) {
                                                                     e.isActive ?
                                                                         e.isAvailable ?
                                                                             e.isCartItem ?
-                                                                                (<div className='cartItem'>Guardado<LocalMallOutlinedIcon /></div>) : (
+                                                                                (<a href="/cart" className='cartItem'>Guardado<LocalMallOutlinedIcon /></a>) : (
                                                                                     <button
                                                                                         className='card-button'
                                                                                         onClick={() => handleClick(index)}

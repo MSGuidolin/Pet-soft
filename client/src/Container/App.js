@@ -18,6 +18,7 @@ import HomeProvider from "../components/HomeProviders/HomePage/HomeProvider";
 import Providers from "../components/SearchProvider/Providers";
 import ProviderRating from "../components/Section/ProviderRating/ProviderRating";
 // import CovidProtocol from "../components/CovidProtocol/CovidProtocol";
+import Services from "../components/Section/Services/Services";
 import Footer from "../components/Footer/Footer";
 import AboutPetSoft from "../components/About/AboutPetSoft.js";
 import AboutUs from "../components/About/AboutUs";
@@ -51,6 +52,7 @@ const App = () => {
       <Route exact path="/service/upload/:id" component={ServiceUpload} />
       <Route exact path="/providers/:id/profile" component={ProviderProfile} />
       <Route exact path="/providers/review/:id" component={ProviderRating} />
+      <Route exact path="/services" component={Services} />
       <Route
         exact
         path="/services/providers/:service/:provider/calendar"

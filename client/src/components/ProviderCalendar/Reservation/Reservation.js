@@ -6,14 +6,12 @@ import './Reservation.scss';
 import axios from 'axios';
 import { Button, Menu, MenuItem } from '@material-ui/core';
 import Fade from "@material-ui/core/Fade";
-import EditIcon from '@material-ui/icons/Edit';
 import AddIcon from '@material-ui/icons/Add';
-import FormAddresses from '../../UserProfile/Form/FormAddresses';
 import { toast } from 'react-toastify';
 import PetsIcon from '@material-ui/icons/Pets';
 import FormImage from '../../Pets/FormImage/FormImage';
 
-export default function Reservation({ handleActive, date, hour, provider, service, price, handleClickModal, providerID }) {
+export default function Reservation({ handleActive, date, hour, provider, direction,  service, price, handleClickModal, providerID }) {
     const [addresses, setAddresses] = useState([]);
     const [pets, setPets] = useState([]);
     const [addModal, setAddModal] = useState(false);
@@ -32,7 +30,7 @@ export default function Reservation({ handleActive, date, hour, provider, servic
         hour: hour,
         service: service,
         price: price,
-        address: '',
+        direction: direction,
         pet: '',
         isActive: true
     });
@@ -179,6 +177,10 @@ export default function Reservation({ handleActive, date, hour, provider, servic
                         <tr>
                             <td>Proveedor</td>
                             <td>{provider}</td>
+                        </tr>
+                        <tr>
+                            <td>Dirección</td>
+                            <td>{direction}</td>
                         </tr>
                         <tr>
                             <td>Fecha</td>

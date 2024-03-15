@@ -9,7 +9,7 @@ function EventsHistory() {
     
     return (
         <div>
-            <Submenu/>
+            {/* <Submenu/> */}
             <Section/>            
         </div>
     )   

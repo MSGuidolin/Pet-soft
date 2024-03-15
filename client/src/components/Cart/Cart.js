@@ -67,13 +67,13 @@ function Cart(props) {
         <div className='container-main'>
             <div className='container'>
                 <br />
-                <h1 className='title'>Bolsa de compras</h1>
+                <h1 className='title'>Carrito de compras</h1>
                 {
                     loading ? (<div>Loading...</div>) :
                         error ? (<div>{error}</div>) :
                             !views.length ? (
                                 <Error
-                                    message='No dispone de ninguna reservación de servicio en este momento'
+                                    message='No dispone de ninguna reserva para pagar en este momento'
                                 />) :
                                 (
                                     <Grid container direction="row">

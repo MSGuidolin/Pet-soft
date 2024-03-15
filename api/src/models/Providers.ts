@@ -65,7 +65,7 @@ const ProvidersSchema = new Schema<IProvider>(
 
     hasCalendar: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     addresses: [
       {

@@ -16,6 +16,8 @@ import Fade from '@material-ui/core/Fade';
 import { logout } from '../../Redux/actions/user.actions';
 import './Header.scss';
 import { UserContext } from '../../index';
+import UserPic from '../../img/wall-cart.jpeg'
+import ProvPic from '../../img/veterinaria-default.jpg'
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -202,7 +204,8 @@ export default function PrimarySearchAppBar() {
     <Avatar
       onClick={handleClick}
       alt={username ? !username : 'User'}
-      src='/static/images/avatar/1.jpg'
+      src= {ProvPic}
+
     >
       {render && render[0]}
     </Avatar>,
@@ -235,7 +238,7 @@ export default function PrimarySearchAppBar() {
           <Avatar
             onClick={handleClick}
             alt={username ? !username : 'User'}
-            src='/static/images/avatar/1.jpg'
+            src= {UserPic}
           />
           ,
           <Menu
@@ -253,34 +256,19 @@ export default function PrimarySearchAppBar() {
               <MenuItem onClick={(e) => handleRedirect(e)}>Perfil</MenuItem>
             </Link>
             <Link
-              to={`/pets`}
-              style={{ color: 'rgb(121, 47, 111)', textDecoration: 'none' }}
-            >
-              <MenuItem onClick={handleClose}>Mis Mascotas</MenuItem>
-            </Link>
-            <Link
               to={'/profile/historial'}
               style={{ color: 'rgb(121, 47, 111)', textDecoration: 'none' }}
             >
               <MenuItem onClick={handleClose}>Historial De Compras</MenuItem>
             </Link>
+            <Link
+              to={'/cart'}
+              style={{ color: 'rgb(121, 47, 111)', textDecoration: 'none' }}
+            >
+              <MenuItem onClick={handleClose}>Cartito De Compras</MenuItem>
+            </Link>
             <MenuItem onClick={handleCloseLogin}>Cerrar Sesión</MenuItem>
           </Menu>
-          ,
-          <Link
-            to={'/cart'}
-            style={{
-              color: 'rgb(121, 47, 111)',
-              textDecoration: 'none',
-              borderRadius: 50,
-              marginLeft: '1rem',
-            }}
-          >
-            <Button color='inherit'>
-              <BiShoppingBag />
-            </Button>
-          </Link>
-          ,
         </div>,
       ]
       : loggedProvider;
@@ -298,7 +286,7 @@ export default function PrimarySearchAppBar() {
                   width: '4rem',
                   height: '4rem ',
                   marginBottom: '-5px',
-                  marginTop: '2px'
+                  marginTop: '3px'
                 }}
               />
             </Link>
@@ -337,6 +325,16 @@ export default function PrimarySearchAppBar() {
             <div style={{ marginLeft: '4rem' }}>Sobre nosotros</div>
           </Link>
 
+          <Link
+            to={'/services'}
+            style={{
+              textDecoration: 'none',
+              fontWeight: 'bold',
+              color: '#00695c',
+            }}
+          >
+            <div style={{ marginLeft: '4rem' }}>Servicios</div>
+          </Link>
           {/* <Link
             to={'/covid'}
             style={{

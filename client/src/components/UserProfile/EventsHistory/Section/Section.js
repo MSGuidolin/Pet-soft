@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserReservations } from "../../../../Redux/actions/user.actions";
 import Event from "./Events/Event";
+import Error from '../../../../components/Error/Error';
 import "./Section.css";
 
 function Section() {
@@ -23,17 +24,29 @@ function Section() {
     }
   }, [ID]);
 
+  // const useStyles = makeStyles(() => ({
+
+  //   Error: {
+      
+  //   }
+  // }));
+
   let reservations = [];
   if (data && data.length) {
     reservations = data;
   } else {
     return (
-      <div>
-        <h3>
-        No se han registrado compras aún
-        </h3>
+      <div className='container-main'>
+        <div className='container'>
+          <br />
+          <h1 className='title'>Historial de compras</h1>
+
+          <Error
+            message='No se han registrado compras aún'
+          />
+
+        </div>
       </div>
-      
     )
   }
 

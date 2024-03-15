@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
         width: 500,
         height: 300,
         padding: 10,
+        margin: 30,
         backgroundColor: '#ebebeb'
     },
     content: {
@@ -143,7 +144,7 @@ function CartOrder({ total, itemLoading, response, props }) {
             <Paper className={classes.paper}>
                 <Grid container direction='column' justifyContent='space-between' className={classes.content}>
                     <Typography variant='h4' className={classes.title}>
-                        Detalle de compra
+                        Detalle de la compra
                     </Typography>
                     <Grid item container justifyContent='space-between'>
                         <Grid item>

@@ -308,7 +308,7 @@ export default function SignUp() {
                                 // onChange={handleChange}
                                 >
                                     <MenuItem value={'Veterinaria'} selected='true' >Veterinaria</MenuItem>
-                                    {/* <MenuItem value={'Pet Shop'}>Pet Shop</MenuItem> */}
+                                    <MenuItem value={'Pet Shop'}>Pet Shop</MenuItem>
                                 </Select>
                             </FormControl>
                         </Grid>
@@ -411,7 +411,7 @@ export default function SignUp() {
                 </form>
             </div>
             <Box mt={5}>
-                    </Box>
+            </Box>
         </Container>
     );
 }

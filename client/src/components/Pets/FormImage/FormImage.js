@@ -80,7 +80,7 @@ function Form({ showModal, setShowModal, change }) {
               </div>
 
               <div className="form-element-1">
-                <label>Edad</label>
+                <label>Edad (en años)</label>
                 <input
                   className="input-form"
                   name="age"
@@ -95,10 +95,10 @@ function Form({ showModal, setShowModal, change }) {
               <div className="form-element-1">
                 <label>Sexo</label>
                 <br></br>
-                <input type="radio" id="male" name="sex" value="Macho"/>
-                  <label for="male">Macho</label>
-                <input type="radio" id="female" name="sex" value="Hembra"/>
-                  <label for="female">Hembra</label>
+                <input type="radio" id="male" name="sex" value="Macho" />
+                <label for="male">Macho</label>
+                <input type="radio" id="female" name="sex" value="Hembra" />
+                <label for="female">Hembra</label>
               </div>
 
               <div className="form-element-1">

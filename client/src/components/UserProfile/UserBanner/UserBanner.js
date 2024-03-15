@@ -46,6 +46,7 @@ const useStyles = makeStyles(() => ({
     borderRadius: 3,
   },
   bannerText: {
+    // textcolor:,
     position: 'absolute',
     top: '5%',
     left: 16,
@@ -122,7 +123,7 @@ function UserBanner() {
     <div className='banner-profile-container'>
       <Grid item className={classes.gridBanner} >
         <Box className={classes.containerBanner} >
-          <img className={classes.bannerImg} src={"https://images.squarespace-cdn.com/content/v1/5c3f6369f407b4358c0109d2/1572883150636-YIFZX2C95HAATK7ZPFKS/_MG_1559.JPG?format=1500w"} />
+          <img className={classes.bannerImg} src={"https://th.bing.com/th/id/R.5ae1e9e604c3f545ead6c4628f284b9e?rik=x62iRf6dC2B60Q&pid=ImgRaw&r=0"} />
           <Typography variant="h4" className={classes.bannerText}>
             ¡Hola {userData && userData.firstName}!
           </Typography>
@@ -132,13 +133,8 @@ function UserBanner() {
         </Box>
       </Grid>
       <div className='under-banner'>
-        <Link to='/cart' className='under-button'>
-          Ver Carrito de compras
-        </Link>
-      </div>
-      <div className='under-banner'>
-        <Link to='/profile/historial' className='under-button'>
-          Ver Historial de compras
+        <Link to='/pets' className='under-button'>
+          Mis Mascotas
         </Link>
       </div>
     </div>

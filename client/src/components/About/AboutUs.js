@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => ({
   bannerText: {
     position: "absolute",
     top: "20%",
-    left: "15%",
+    left: "14%",
     color: "rgb(121, 47, 111)",
     padding: 10,
   },
@@ -94,7 +94,7 @@ function AboutUs() {
               <div className={classes.bannerContainer}>
                 <img className={classes.bannerImg} src={Image} />
                 <Typography className={classes.bannerText} variant="h3">
-                  Sobre nosotros
+                <b>Sobre nosotros</b>
                 </Typography>
                 <Typography className={classes.bannerSubtitle}>
                   <b>PetSoft</b> es el resultado del esfuerzo de estudiantes del IES 9-023 y

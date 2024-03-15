@@ -32,7 +32,7 @@ const useStyles = makeStyles(() => ({
         textShadow: '0 0 10px white, 0 0 10px white'
     },
     containerText:{
-        padding: 50
+        padding: 30
     },
     text:{
         width:'50%',
@@ -111,12 +111,12 @@ function AboutPetSoft() {
                                 Potencia tu trabajo cómo profesional.
                             </Typography>
                             <Typography className={classes.subtitle}>
-                                Aquí podrás registrar una nueva institución veterinaria o tienda de productos relacionada.
+                                Aquí podrás registrar una nueva institución veterinaria.
                             </Typography>
                         </Grid>
                         <Grid item container justifyContent='center' alignItems='center' className={classes.containerButton}>
                             <Link to='/userRegister'>
-                                <Button variant='primary' className={classes.button}>PROFESIONAL</Button>
+                                <Button variant='primary' className={classes.button}>VETERINARIA</Button>
                             </Link>
                         </Grid>
                     </Grid>
@@ -124,19 +124,31 @@ function AboutPetSoft() {
                     <Grid item container justifyContent='center' className={classes.containerText}>
                         <Grid item container direction='column' className={classes.text}>
                             <Typography className={classes.title}>
-                                Pensando en hacerte feliz
+                                Te ayudamos a cuidar a tu mascota
                             </Typography>
                             <Typography className={classes.subtitle}>
-                                Registra un nuevo usuario.
+                                Registrate como cliente de nuestra página y reserva tus turnos.
                             </Typography>
                         </Grid>
                         <Grid item container justifyContent='center' alignItems='center' className={classes.containerButton}>
                             <Link to='/userRegister'>
-                                <Button variant='primary' className={classes.button}>USUARIO</Button>
+                                <Button variant='primary' className={classes.button}>CLIENTE</Button>
                             </Link>
                         </Grid>
                     </Grid>
 
+                    <Grid item container justifyContent='center' className={classes.containerText}>
+                        <Grid item container direction='column' className={classes.text}>
+                            <Typography className={classes.title}>
+                                ¿Ya te registraste?
+                            </Typography>
+                        </Grid>
+                        <Grid item container justifyContent='center' alignItems='center' className={classes.containerButton}>
+                            <Link to='/login'>
+                                <Button variant='primary' className={classes.button}>INGRESA</Button>
+                            </Link>
+                        </Grid>
+                    </Grid>
                 </Grid>
             </div>
         </div>

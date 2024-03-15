@@ -74,7 +74,7 @@ function PetCard({ image, name, animal, race, age, sex, userID, refreshPets }) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button onClick={seePet} size="small" variant="contained" color="success" >Ver</Button>
+                    <Button onClick={seePet} size="small" variant="contained" color="success" >Historial</Button>
                     <Button onClick={editPet} size="small" variant="contained" >Editar</Button>
                     <Button onClick={deletePet} size="small" variant="contained" color="error" >Eliminar</Button>
                 </CardActions>

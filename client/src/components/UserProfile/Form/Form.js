@@ -84,6 +84,7 @@ function Form({ showModal, setShowModal }) {
               <div className="form-element-1">
                 <label>Nombre  </label>
                 <input
+                  autoFocus
                   className={`${errors.firstName && "danger"}`}
                   className="input-form"
                   name="firstName"
