@@ -112,6 +112,12 @@ export default function ProviderCalendar({ match }) {
         }
     }
 
+    const getProviderFormattedDirection = ()=> {
+        const {direction, city, state} = provider.addresses[0] || {};
+
+        return direction ? `${direction} - ${city} - ${state}` : '';
+    }
+
     return (
         <div className='container-main'>
             {
@@ -160,6 +166,8 @@ export default function ProviderCalendar({ match }) {
                                                                                 price={service.price}
                                                                                 providerID={providerID}
                                                                                 handleClickModal={() => handleClickModal(index)}
+                                                                                direction={getProviderFormattedDirection()}
+                                                                                phone={provider.phone}
                                                                             />
                                                                         ) : null
                                                                 }

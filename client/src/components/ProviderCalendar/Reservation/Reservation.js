@@ -11,7 +11,7 @@ import { toast } from 'react-toastify';
 import PetsIcon from '@material-ui/icons/Pets';
 import FormImage from '../../Pets/FormImage/FormImage';
 
-export default function Reservation({ handleActive, date, hour, provider, direction,  service, price, handleClickModal, providerID }) {
+export default function Reservation({ handleActive, date, hour, provider, direction,  service, price, handleClickModal, providerID, phone }) {
     const [addresses, setAddresses] = useState([]);
     const [pets, setPets] = useState([]);
     const [addModal, setAddModal] = useState(false);
@@ -181,6 +181,10 @@ export default function Reservation({ handleActive, date, hour, provider, direct
                         <tr>
                             <td>Dirección</td>
                             <td>{direction}</td>
+                        </tr>
+                        <tr>
+                            <td>Telefono</td>
+                            <td>{phone}</td>
                         </tr>
                         <tr>
                             <td>Fecha</td>
