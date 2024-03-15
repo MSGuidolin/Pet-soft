@@ -308,7 +308,7 @@ export default function SignUp() {
                                 // onChange={handleChange}
                                 >
                                     <MenuItem value={'Veterinaria'} selected='true' >Veterinaria</MenuItem>
-                                    <MenuItem value={'Pet Shop'}>Pet Shop</MenuItem>
+                                    <MenuItem value={'Peluquería'}>Peluquería</MenuItem>
                                 </Select>
                             </FormControl>
                         </Grid>
