@@ -29,6 +29,7 @@ import CompletePerfil from '../components/CompletePerfil/CompletePerfil';
 
 import EventsHistory from "../components/UserProfile/EventsHistory/EventsHistory";
 import Pets from "../components/Pets/Pets";
+import SeeHist from "../components/Pets/SeeHist/SeeHist.jsx";
 
 const App = () => {
   return (
@@ -64,6 +65,8 @@ const App = () => {
       {/* <Route exact path="/covid" component={CovidProtocol} /> */}
       <Route exact path="/profile/historial" component={EventsHistory} />
       <Route exact path="/pets" component={Pets} />
+      <Route exact path="/seehist" component={SeeHist} />
+
       {/* <Route exact path="/confirmation/user/:id" component={ConfirmationMail} />
       <Route
         exact

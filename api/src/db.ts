@@ -12,7 +12,7 @@ module.exports = async function connection() {
       //   password: config.MONGO_PASSWORD
     };
     const db = await mongoose.connect(
-      `mongodb://${config.MONGO_HOST}:27017/${config.MONGO_DATABASE}`,
+      `mongodb://127.0.0.1:27017/${config.MONGO_DATABASE}`,
       mongooseOptions
     );
     console.log('database is connected to:', db.connection.name);

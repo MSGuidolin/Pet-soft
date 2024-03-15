@@ -1,0 +1,56 @@
+.pet-container {
+    padding: 20px;
+}
+
+.title01 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newpet {
+    display: flex;
+    background-color: rgb(112, 235, 173);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 1px 2px black;
+}
+
+.newpet:hover{
+    background-color: #E5EFE3;
+}
+
+.table {
+    border-collapse: collapse; // Elimina los bordes entre las celdas
+    background-color: #E5EFE3; // Color de fondo verde claro
+    margin: 0 auto; // Centra la tabla horizontalmente
+    width: 60%; // Ancho de la tabla, ajusta según sea necesario
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); // Agrega sombra
+
+    th {
+        background-color: #02735E; // Color de fondo del encabezado
+        font-weight: bold; // Estilo de texto en negrita para los encabezados de columna
+        padding: 10px; // Espaciado interno del encabezado
+        text-align: center; // Centra el texto del encabezado
+        font-size: 18px; 
+        color: white;
+
+    }
+
+    td {
+        padding: 10px; // Espaciado interno de las celdas
+        text-align: center; // Centra el contenido de las celdas
+        font-size: 16px; 
+
+    }
+
+    tr:nth-child(even) {
+        background-color: white; // Alternar el color de fondo de las filas impares
+        font-size: 16px; 
+
+    }
+}
+
+// E6EFE6
