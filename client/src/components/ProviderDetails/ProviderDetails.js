@@ -20,27 +20,33 @@ const ProviderDetails = () => {
 
     <div className="container-main">
       <div className="container">
-        <h1 className="title">
-          {providerDetails.data &&
-            `${providerDetails.data.firstName} ${providerDetails.data.lastName}`}
-        </h1>
-        <div>
-          {providerDetails.data?.image !== undefined ? (
-            <img
-              className="card-img"
-              src={providerDetails.data?.image}
-              alt="Provider picture"
-            ></img>
-          ) : (
-            <img
-              className="card-img"
-              src={veterinaria_default}
-              alt="Default Image"
-            ></img>
-          )}
+        <div className="contenedor-prov">
           <div>
-            <h2 className="details-h2">Mi información</h2>
-            <div className="container-about">
+            {providerDetails.data?.image !== undefined ? (
+              <img
+                className="card-img-d "
+                src={providerDetails.data?.image}
+                alt="Provider picture"
+              ></img>
+            ) : (
+              <img
+                className="card-img-d "
+                src={veterinaria_default}
+                alt="Default Image"
+              ></img>
+            )}
+          </div>
+      
+          <h1 className="title-prov">
+            {providerDetails.data &&
+            `${providerDetails.data.firstName} ${providerDetails.data.lastName}`}
+          </h1>
+
+          
+
+        </div>
+          
+          <div className="container-about">
               {providerDetails.data?.bio ? (
                 <p>{providerDetails.data.bio}</p>
               ) : (
@@ -53,10 +59,9 @@ const ProviderDetails = () => {
                 </p>
               )}
             </div>
-          </div>
-          <div>
+
+        <div>
             <ProviderServices providerId={id} />
-          </div>
         </div>
       </div>
     </div>

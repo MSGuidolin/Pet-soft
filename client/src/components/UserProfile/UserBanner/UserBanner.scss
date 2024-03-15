@@ -9,13 +9,15 @@
 }
 
 .under-button{
-    background-image: url('https://media.istockphoto.com/photos/spa-setting-with-orchid-flower-and-massage-stones-on-wooden-picture-id922785434?k=6&m=922785434&s=170667a&w=0&h=rY6PndXYvmFCJnsnR-HOp2AWECJuE4PflBosu3Vnt_c=');
+    // background-image: url('https://media.istockphoto.com/photos/spa-setting-with-orchid-flower-and-massage-stones-on-wooden-picture-id922785434?k=6&m=922785434&s=170667a&w=0&h=rY6PndXYvmFCJnsnR-HOp2AWECJuE4PflBosu3Vnt_c=');
+    background-color: #02735E;
     background-size: cover;
     display: block;
     text-decoration: none;
     padding: 15px;
     font-size: larger;
-    color: black;
+    color: white;
+    text-align: center;
 }
 
 .under-button:hover {

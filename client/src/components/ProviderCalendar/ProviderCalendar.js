@@ -136,7 +136,7 @@ export default function ProviderCalendar({ match }) {
                                     {
                                         loadingEvents ? (<div className='calendar-events'>cargando...</div>) : (
                                             <div className='calendar-events'>
-                                                <h2>Turnos Disponibles</h2>
+                                                <h2 className='t-disp'>Turnos Disponibles</h2>
                                                 {
                                                     !events ? (<div>cargando...</div>) : (
                                                         events.map((e, index) => (
@@ -180,7 +180,7 @@ export default function ProviderCalendar({ match }) {
                                                                                         className='card-button'
                                                                                         onClick={() => handleClick(index)}
                                                                                     >
-                                                                                        Añadir al bolso
+                                                                                        Reservar
                                                                                     </button>
                                                                                 )
                                                                             : null

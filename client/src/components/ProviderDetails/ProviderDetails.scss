@@ -15,4 +15,29 @@
   padding: 10px;
   box-shadow: 0 2px 8px 5px rgb(47, 121, 111);
   border-radius: 10px;
+  display: flex; // Utiliza flexbox para el diseño
+    justify-content: center;
+}
+
+.title-prov {
+  display: flex;
+  justify-content: center;
+  text-shadow: 0 2px 4px black, 0 1px 4px black, 0 5px 20px #02735E;
+  align-items: center;
+  color: aliceblue;
+  margin-left: 430px; 
+}
+
+.contenedor-prov {
+  margin-top: 50px;
+  display: flex;
+ 
+}
+
+.card-img-d {
+  height: 160px;
+  width: 160px;
+  border-radius:8rem;
+  box-shadow: 0 0 5px 1px black;
+  margin-left: 150px;
 }

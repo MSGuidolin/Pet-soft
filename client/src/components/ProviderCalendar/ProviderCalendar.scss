@@ -6,11 +6,12 @@
 .calendar-container{
     display: flex;
     padding: 50px;
+   
 }
 
 .calendar-division{
-    width: 50%;
-    margin: auto;
+    width: 40%;
+    margin: 30px;
 }
 
 .event{
@@ -67,4 +68,8 @@
         width: 100%;
         margin: auto;
     }
+}
+
+.t-disp {
+    margin-bottom: 40px;
 }
