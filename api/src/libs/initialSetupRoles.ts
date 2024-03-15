@@ -40,7 +40,7 @@ export const createService = async () => {
       }).save(),
       new Services({
         image:
-          '',
+          'https://imagenes.lainformacion.com/files/image_656_370/uploads/imagenes/2018/05/25/5b07d92e563ba.jpeg',
         name: 'Esterilización',
         price: 15500,
         description: `Esta operación previene la reproducción y también,
@@ -48,7 +48,7 @@ export const createService = async () => {
       }).save(),
       new Services({
         image:
-          '',
+          'https://t2.ea.ltmcdn.com/es/images/3/6/3/las_vacunas_de_los_cachorros_23363_2_600.jpg',
         name: 'Operación mayor',
         price: 30000,
         description: `Cirugías de cabeza, tórax y zonas de mayor riesgo`,
