@@ -27,7 +27,7 @@ function Section() {
   // const useStyles = makeStyles(() => ({
 
   //   Error: {
-      
+
   //   }
   // }));
 
@@ -40,10 +40,53 @@ function Section() {
         <div className='container'>
           <br />
           <h1 className='title'>Historial de compras</h1>
+          <br />
 
-          <Error
+          <table className='table'>
+            <thead>
+              <tr>
+                <th>Mascota</th>
+                <th>Fecha</th>
+                <th>Servicio</th>
+                <th>Veterinaria</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tesla</td>
+                <td>28/06/2023</td>
+                <td>Peluqueria</td>
+                <td>Bigotes</td>
+              </tr>
+              <tr>
+                <td>Tesla</td>
+                <td>08/02/2023</td>
+                <td>Cirugia</td>
+                <td>Patitas</td>
+              </tr>
+              <tr>
+                <td>Tesla</td>
+                <td>08/02/2021</td>
+                <td>Cirugia</td>
+                <td>Hocicos</td>
+              </tr>
+              <tr>
+                <td>Tesla</td>
+                <td>08/02/2021</td>
+                <td>Cirugia</td>
+                <td>Hocicos</td>
+              </tr>
+              <tr>
+                <td>Tesla</td>
+                <td>08/02/2021</td>
+                <td>Cirugia</td>
+                <td>Hocicos</td>
+              </tr>
+            </tbody>
+          </table>
+          {/* <Error
             message='No se han registrado compras aún'
-          />
+          /> */}
 
         </div>
       </div>
