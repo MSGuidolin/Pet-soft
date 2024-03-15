@@ -12,10 +12,12 @@ const useStyles = makeStyles((theme) => ({
         height: 300,
         padding: 10,
         margin: 30,
-        backgroundColor: '#ebebeb'
+        backgroundColor: '#ebebeb',
+        marginTop:'-30px',
     },
     content: {
-        height: '100%'
+        height: '100%',
+        
     },
     submit: {
         backgroundColor: '#43945c',

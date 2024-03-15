@@ -30,7 +30,7 @@ const useStyles = makeStyles(() => ({
     color: "rgb(121, 47, 111)",
     padding: 10,
     width: "40%",
-    fontSize: "1.1rem",
+    // fontSize: "2rem",
   },
   containerText: {
     padding: 15,
@@ -50,7 +50,9 @@ const useStyles = makeStyles(() => ({
     color: "hsl(308deg 44% 33%)",
     margin: '15px auto',
     width: "80%",
-    textAlign: "center"
+    textAlign: "center",
+    fontSize: '5px'
+
   },
   title: {
     color: "hsl(308deg 44% 33%)",

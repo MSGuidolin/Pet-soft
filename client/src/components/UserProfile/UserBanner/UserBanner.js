@@ -5,6 +5,7 @@ import Image from "../../../img/banner.jpg"
 import { useDispatch, useSelector } from "react-redux";
 import { getUserProfile } from "../../../Redux/actions/user.actions";
 import "./UserBanner.scss";
+import a from "../../../img/a.png";
 
 const ID = window.localStorage.getItem("loggedPetSoftApp")
   ? JSON.parse(window.localStorage.getItem("loggedPetSoftApp"))
@@ -12,6 +13,11 @@ const ID = window.localStorage.getItem("loggedPetSoftApp")
 
 
 const useStyles = makeStyles(() => ({
+
+  // textCentrado: {
+  //   text-align: 'center',
+  // },
+
   userProfile: {
     display: 'flex',
     justifyContent: 'space-around',
@@ -46,11 +52,14 @@ const useStyles = makeStyles(() => ({
     borderRadius: 3,
   },
   bannerText: {
-    // textcolor:,
+    textShadow: '0 0 5px white, 0 0 5px white',
+    display: 'flex',
+    justifyContent: 'center', 
     position: 'absolute',
-    top: '5%',
-    left: 16,
-    textShadow: '0 0 5px white, 0 0 5px white'
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    margin: 0
   },
   bannerTextSubt: {
     position: 'absolute',
@@ -123,11 +132,13 @@ function UserBanner() {
     <div className='banner-profile-container'>
       <Grid item className={classes.gridBanner} >
         <Box className={classes.containerBanner} >
-          <img className={classes.bannerImg} src={"https://th.bing.com/th/id/R.5ae1e9e604c3f545ead6c4628f284b9e?rik=x62iRf6dC2B60Q&pid=ImgRaw&r=0"} />
-          <Typography variant="h4" className={classes.bannerText}>
+          <img className={classes.bannerImg} src={a} />
+          <div className="text-centrado">
+          <h1 variant="h4" className={classes.bannerText} >
             ¡Hola {userData && userData.firstName}!
-          </Typography>
-          <Typography variant="subtitle1" className={classes.bannerTextSubt}>
+          </h1>
+          </div>
+          <Typography variant="subtitle1" className={classes.bannerTextSubt} >
             En este espacio vas a poder ver y editar tu perfil y tambien consultar tus proximos turnos
           </Typography>
         </Box>

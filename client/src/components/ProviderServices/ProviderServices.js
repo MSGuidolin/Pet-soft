@@ -17,9 +17,9 @@ const ProviderServices = ({ providerId }) => {
     // <div>
     <Grid container justifyContent="center" direction="column">
       <Grid item container justifyContent="center">
-        <h2 className="details-h2">
-          Éstos son algunos de los servicios que brindo
-        </h2>
+        {/* <h2 className="details-h2">
+          Éstos son algunos de los servicios que brindamos
+        </h2> */}
       </Grid>
       <Grid item container justifyContent="space-evenly">
         {servicesByProvider ? (
