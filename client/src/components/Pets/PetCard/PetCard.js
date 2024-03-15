@@ -8,19 +8,23 @@ import Typography from '@mui/material/Typography';
 import './PetCard.scss';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import { render } from 'react-dom';
 
 
 
-function PetCard({ image, name, animal, race, age, sex, userID, refreshPets }) {
+function PetCard ({ image, name, animal, race, age, sex, userID, refreshPets }) {
 
-    const seePet = () => {
-        axios.get(`http://localhost:3002/pets/${userID}/${name}`);
-    
-        
+    const seeHist = async () => {
+
+        try {         
+            const res = await axios.get(`http://localhost:3002/pets/${userID}/${name}`);
+            const pet = res.data;
+
+            window.location.href = 'seehist';
+        } catch (error) {
+            console.error('Error al obtener los datos de la mascota:', error);
+        }
     }
-    // render  VERPET
-    
+
     const editPet = () => {
         axios.get(`http://localhost:3002/pets/${userID}/${name}`);
 
@@ -74,7 +78,7 @@ function PetCard({ image, name, animal, race, age, sex, userID, refreshPets }) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button onClick={seePet} size="small" variant="contained" color="success" >Ver</Button>
+                    <Button onClick={seeHist} size="small" variant="contained" color="success" >Historial</Button>
                     <Button onClick={editPet} size="small" variant="contained" >Editar</Button>
                     <Button onClick={deletePet} size="small" variant="contained" color="error" >Eliminar</Button>
                 </CardActions>

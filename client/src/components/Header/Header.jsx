@@ -350,7 +350,7 @@ export default function PrimarySearchAppBar() {
 
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}></div>
-          <div style={{ display: 'flex', marginRight: '2rem' }}></div>
+          {/* <div style={{ display: 'flex', marginRight: '2rem' }}></div> */}
 
           <b>{render === '' ? loginAndRegister : loggedClient}</b>
 
