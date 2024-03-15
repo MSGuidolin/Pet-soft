@@ -25,8 +25,9 @@ const CompletePerfil = () => {
         if (data.roles[0]?.name === 'user') {
           dispatch(LoginUser({ email: data.email, password: data.email })).then(
             (user) => {
+              console.log(user.userFound.firstName)
               toast.success(
-                `👍 Bienvenido ${data.name}. Un gran día te espera!`,
+                `👍 Bienvenido ${user.userFound.firstName}. Un gran día te espera!`,
                 {
                   position: toast.POSITION.TOP_CENTER,
                 }

@@ -3,6 +3,7 @@ import { Schema, model } from "mongoose";
 const EventSchema = new Schema(
   {
     condition: {
+      required: true,
       type: String,
       enum: ["cancelled", "finalized", "pending"],
       default: "pending",

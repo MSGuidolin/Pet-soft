@@ -58,7 +58,7 @@ function Form({ showModal, setShowModal, change }) {
               <div className="form-element-1">
                 <label>Especie</label>
                 <br></br>
-                <select name="animal" type="string" required>
+                <select className="selectanimal" name="animal" type="string" required>
                   <option value="Gato">Gato</option>
                   <option value="Perro">Perro</option>
                   <option value="Ave">Ave</option>

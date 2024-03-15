@@ -11,32 +11,34 @@ import { toast } from 'react-toastify';
 
 
 
-function PetCard ({ image, name, animal, race, age, sex, userID, refreshPets }) {
+function PetCard ({ image, name, animal, race, age, sex, userID, refreshPets, id, setShowEditModal, setSelectedPet }) {
 
     const seeHist = async () => {
 
-        try {         
-            const res = await axios.get(`http://localhost:3002/pets/${userID}/${name}`);
-            const pet = res.data;
-
-            window.location.href = 'seehist';
+        try {        
+            window.location.href = `seehist/${id}`;
         } catch (error) {
             console.error('Error al obtener los datos de la mascota:', error);
         }
     }
 
-    const editPet = () => {
-        axios.get(`http://localhost:3002/pets/${userID}/${name}`);
+    const editPet = async () => {
+        const pet = await axios.get(`http://localhost:3002/pets/pet/${id}`);
+        console.log(pet)
+        setSelectedPet(pet.data);
+        setTimeout(()=>{
+            setShowEditModal(true);
+        },100);
 
         // edit pet
 
-        refreshPets()
-        toast.success(
-            `Actualizaste los datos de ${name}.`,
-            {
-              position: toast.POSITION.TOP_CENTER,
-            }
-          );
+        // refreshPets()
+        // toast.success(
+        //     `Actualizaste los datos de ${name}.`,
+        //     {
+        //       position: toast.POSITION.TOP_CENTER,
+        //     }
+        //   );
     }
 
     const deletePet = async () => {

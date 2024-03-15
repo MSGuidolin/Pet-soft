@@ -118,7 +118,7 @@ export default function SignIn() {
         if (user) {
           if (user.userFound) {
             setUser(user.userFound?.roles[0]?.name);
-            console.log(user);
+            console.log(user.userFound.lastName);
           }
 
           if (
@@ -126,7 +126,7 @@ export default function SignIn() {
             user.providerFound.confirm
           ) {
             toast.success(
-              `👍 Bienvenido ${email.value}. Un gran día te espera!`,
+              `👍 Bienvenidos ${user.providerFound.lastName}. Un gran día te espera!`,
 
               {
                 position: toast.POSITION.TOP_CENTER,
@@ -139,7 +139,7 @@ export default function SignIn() {
             user.userFound.confirm
           ) {
             toast.success(
-              `👍 Bienvenido ${email.value}. Un gran día te espera!`,
+              `👍 Bienvenido ${user.userFound.firstName}. Un gran día te espera!`,
 
               {
                 position: toast.POSITION.TOP_CENTER,

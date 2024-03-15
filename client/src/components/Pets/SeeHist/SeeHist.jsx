@@ -1,17 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import './SeeHist.scss';
+import axios from 'axios'
+import { useParams } from 'react-router-dom';
+import { HOST } from '../../../utils/constants';
 
-function SeeHist({ name }) {
+function SeeHist() {
+    const { id } = useParams();
+    
+    const [pet, setPet] = useState(null)
 
-
-    return (
+    useEffect(
+        async () => {
+            const pet = await axios.get(`${HOST}/pets/pet/${id}`)
+            setPet(pet.data);
+        }, []
+    );
+    return pet && (
         <div className='container-main'>
             <div className='container'>
                 <div className='user-profile-container'>
                     <div className='title01'>
-                        <h1>HISTORIAL DE TURNOS: {name}</h1>
+                        <h1>HISTORIAL DE TURNOS: {pet.name}</h1>
                     </div>
                 </div>
+                {pet.name !== 'Tesla' ? <span style={{color:'red'}}> No hay turnos para esta mascota</span>:
                 <table className='table'>
                     <thead>
                         <tr>
@@ -47,7 +59,7 @@ function SeeHist({ name }) {
                             <td>Hocicos</td>
                         </tr>
                     </tbody>
-                </table>
+                </table>}
             </div>
         </div>
     );

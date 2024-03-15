@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Pets.scss';
 import Form from './FormImage/FormImage';
+import EditPetForm from './FormImage/EditPet';
 import axios from 'axios';
 import PetCard from './PetCard/PetCard';
 
@@ -9,6 +10,8 @@ function Pets() {
     const [showModal, setShowModal] = useState(false);
     const [pets, setPets] = useState([]);
     const [change, setChange] = useState(false);
+    const [showEditModal, setShowEditModal] = useState(false);
+    const [selectedPet, setSelectedPet] = useState({});
 
     useEffect(() => {
         if (window.localStorage.getItem("loggedPetSoftApp")) {
@@ -30,7 +33,8 @@ function Pets() {
 
     useEffect(() => {
         console.log(pets)
-    }, [pets])
+        console.log(selectedPet)
+    }, [pets, selectedPet])
 
     function toBase64(arr) {
         arr = new Uint8Array(arr)
@@ -53,6 +57,7 @@ function Pets() {
                         <button className='newpet' onClick={() => setShowModal(true)}>NUEVA MASCOTA</button>
                     </div>
                     <Form change={() => setChange(!change)} showModal={showModal} setShowModal={setShowModal}></Form>
+                    <EditPetForm showModal={showEditModal} setShowModal={setShowEditModal} pet={selectedPet} refreshPets={refreshPets}/>
                 </div>
                 <div className='pet-container'>
                     {
@@ -66,6 +71,9 @@ function Pets() {
                                 race={pet.race}
                                 age={pet.age}
                                 sex={pet.sex}
+                                id={pet._id}
+                                setShowEditModal={setShowEditModal}
+                                setSelectedPet={setSelectedPet}
                             />
                         )) : null
                     }

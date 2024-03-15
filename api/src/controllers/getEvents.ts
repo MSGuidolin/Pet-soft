@@ -15,7 +15,7 @@ export const getCalendarEventsByDay: RequestHandler = async (req, res) => {
   if (req.body.user !== "") {
     const user: any = await Users.findById(req.body.user);
     const bag: any = await Bags.findOne({ user: user });
-    reservations = bag.reservations;
+    reservations = bag?.reservations || [];
   }
 
   Providers.findById(req.body.provider)

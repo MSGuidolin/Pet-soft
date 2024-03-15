@@ -65,7 +65,7 @@ const App = () => {
       {/* <Route exact path="/covid" component={CovidProtocol} /> */}
       <Route exact path="/profile/historial" component={EventsHistory} />
       <Route exact path="/pets" component={Pets} />
-      <Route exact path="/seehist" component={SeeHist} />
+      <Route exact path="/seehist/:id" component={SeeHist} />
 
       {/* <Route exact path="/confirmation/user/:id" component={ConfirmationMail} />
       <Route
